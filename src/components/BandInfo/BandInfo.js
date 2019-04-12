@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { SearchParams } from '../SearchParams/SearchParams'
-import { makeBandUrl } from '../../helpers/infoCleaners'
+import { makeBandUrl, makeDateUrl } from '../../helpers/infoCleaners'
+import { getEvents } from '../../helpers/apiCalls'
 
 export class BandInfo extends Component {
   constructor(props) {
     super(props)
     this.state = {
       searchTerm: '',
-      searchParams: ''
+      searchParams: '',
+      state: '',
+      city: '',
+      startDate: '',
+      endDate: ''
     }
   }
 
-  collectSearchParams = (params) => {
-    this.setState({ searchParams: params })
+  collectSearchParams = (param, value) => {
+    this.setState({ [param]: value })
   }
 
   renderSimilarBands = (bands) => {
@@ -30,7 +35,24 @@ export class BandInfo extends Component {
   }
 
   createUrl = (term) => {
-    let urlKeyword = makeBandUrl(term)
+    const { state, city, startDate, endDate } = this.state
+    const keywordUrl = makeBandUrl(term)
+    let urlString = `keyword=${keywordUrl}`
+    if (state) {
+      const cleanState = makeBandUrl(state)
+      const stateUrl = `&state=${cleanState}`
+      urlString = urlString + stateUrl
+    }
+    if (city) {
+      const cleanCity = makeBandUrl(city)
+      const cityUrl = `&city=${cleanCity}`
+      urlString = urlString + cityUrl
+    }
+    console.log(urlString)
+    getEvents(urlString)
+    // const startDateUrl = makeDateUrl(startDate)
+    // const endDateUrl = makeDateUrl(endDate) 
+    
   }
 
   render() {

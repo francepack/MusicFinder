@@ -43,6 +43,7 @@ export class BandInput extends Component {
       await this.props.storeSimilarBands(similarBands)
       await this.props.storeBandTags(bandTags)
       await history.push('/band-info')
+      this.props.setLoading()
     } catch(error) {
       return error.message
     }
@@ -50,6 +51,7 @@ export class BandInput extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.setLoading()
     const { bandInput } = this.state
     this.saveBand(bandInput)
     this.getIdeas(bandInput)

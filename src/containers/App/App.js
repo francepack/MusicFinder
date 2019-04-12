@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './App.scss'
+import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
 import { BandInfo } from '../../components/BandInfo/BandInfo'
 import { Route, withRouter, Link } from 'react-router-dom'
@@ -27,8 +28,9 @@ export class App extends Component {
     return (
       <div className='App'>
         <h1>MusicFinder</h1>
-        {error && error}
         <BandInput setError={this.setError} setLoading={this.setLoading} />
+        {error && error}
+        {this.state.loading && <Loading />}
         <Route exact path='/' />
         <Route path='/Loading' />
         <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} />}/>

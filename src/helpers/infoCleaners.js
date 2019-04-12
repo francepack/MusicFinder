@@ -17,6 +17,11 @@ export const makeBandUrl = (band) => {
   return url.join('')
 }
 
+export const makeDateUrl = (date) => {
+  let dateUrl = `startDateTime=`
+  
+}
+
 export const buildBandArray = (matchedBands, tastebands) => {
   // switch (matchedBands.length) {
   //   case 10:
@@ -47,4 +52,23 @@ export const buildBandArray = (matchedBands, tastebands) => {
   } else {
     return 'error'
   }
+}
+
+export const cleanEvents = (eventData) => {
+  const events = eventData._embedded.events.map(event => {
+    console.log(event)
+    event = { 
+      name: event.name, 
+      eventUrl: event.eventUrl, 
+      id: event.id, 
+      date: event.dates.start.localDate,
+      venue: event._embedded.venue[0].name,
+      venueAddress: event._embedded.venue[0].address.line1,
+      city: event._embedded.venue[0].city.name,
+      image: 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
+      }
+      console.log(event.image)
+    return event
+  })
+  return events
 }

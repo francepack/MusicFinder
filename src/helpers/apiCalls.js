@@ -1,5 +1,5 @@
 import { lastfmKey, eventfulKey, ticketmasterKey, tastediveKey } from '../apiKey/key'
-import { makeBandUrl, buildBandArray } from './infoCleaners'
+import { makeBandUrl, buildBandArray, cleanEvents } from './infoCleaners'
 
 export const getSimilarBands = async (band) => {
   let bandUrl = makeBandUrl(band)
@@ -56,6 +56,33 @@ export const getBandTags = async (band) => {
     return error.message
   }
 }
+
+export const getEvents = async (urlString) => {
+  const url = `https://app.ticketmaster.com/discovery/v1/events.json?${urlString}&apikey=${ticketmasterKey}`
+  try {
+    const response = await fetch(url)
+    const eventData = await response.json()
+    console.log(eventData)
+    const events = await cleanEvents(eventData)
+    console.log(events)
+    // const ImageUrls = await findImageUrls(events)
+  } catch(error) {
+    return error.message
+  }
+}
+
+// const findImageUrls = (events) => {
+//   let images = events.map(async event => {
+//     let url = `https://s1.ticketm.net${event.image}`
+//     try {
+//       console.log(event.image)
+//       // await fetch(event.image)
+//     } catch(error) {
+//       return error.message
+//     }
+//   })
+
+// }
 
 
 
