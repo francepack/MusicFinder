@@ -1,27 +1,46 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './App.scss'
 import BandInput from '../BandInput/BandInput'
+import { BandInfo } from '../../components/BandInfo/BandInfo'
+import { Route, withRouter, Link } from 'react-router-dom'
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super()
     this.state= {
-      
+      error: '',
+      loading: false
     }
   }
-  
-  handleSubmit = async (e) => {
 
+  setError = (message) => {
+    this.setState({ error: message })
+  }
+
+  setLoading = () => {
+    this.setState({ loading: !this.state.loading })
   }
   
   render() {
+    const { error, loading } = this.state
     return (
       <div className='App'>
         <h1>MusicFinder</h1>
-        <BandInput />
+        {error && error}
+        <BandInput setError={this.setError} setLoading={this.setLoading} />
+        <Route exact path='/' />
+        <Route path='/Loading' />
+        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} />}/>
+        <Route path='/events' />
       </div>
     )
   }
 }
 
-export default App
+export const mapStateToProps = (state) => ({
+  similarBands: state.similarBands,
+  tags: state.tags
+})
+
+export default withRouter(connect(mapStateToProps, null)(App))

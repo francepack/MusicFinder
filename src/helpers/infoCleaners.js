@@ -3,6 +3,7 @@
 // }
 
 export const makeBandUrl = (band) => {
+  console.log(typeof band)
   const letters = band.split('')
   const url = letters.map(letter => {
     switch (letter) {

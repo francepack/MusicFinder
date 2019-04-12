@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { storeBand, storeSimilarBands, storeBandTags } from '../../actions'
 import { getSimilarBands, getBandTags } from '../../helpers/apiCalls'
 import { cleanBand } from '../../helpers/infoCleaners'
 
 export class BandInput extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       bandInput: ''
     }
@@ -36,10 +37,12 @@ export class BandInput extends Component {
 
   getIdeas = async (band) => {
     try {
+      const { history } = this.props
       let similarBands = await this.searchSimilarBands(band)
       let bandTags = await this.searchForBandTags(band)
       await this.props.storeSimilarBands(similarBands)
       await this.props.storeBandTags(bandTags)
+      await history.push('/band-info')
     } catch(error) {
       return error.message
     }
@@ -80,4 +83,4 @@ export const mapDispatchToProps = (dispatch) => ({
   storeBandTags: (tags) => dispatch(storeBandTags(tags))
 })
 
-export default connect(null, mapDispatchToProps)(BandInput)
+export default withRouter(connect(null, mapDispatchToProps)(BandInput))

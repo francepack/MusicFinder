@@ -28,7 +28,6 @@ const lastfmGetSimilarBands = async (bandUrl) => {
     let bandNames = await similarBands.similarartists.artist.map(band => band.name)
     return bandNames
   } catch(error) {
-    console.log('in error')
     return error.message
   }
 }
@@ -42,7 +41,6 @@ const tastediveGetSimilarBands = async (bandUrl) => {
     let bandNames = await similarBands.Similar.Results.map(band => band.Name)
     return bandNames
   } catch(error) {
-    console.log('in error')
     return error.message
   }
 }
