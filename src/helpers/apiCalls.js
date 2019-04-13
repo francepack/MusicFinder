@@ -23,9 +23,9 @@ export const getSimilarBands = async (band) => {
 const lastfmGetSimilarBands = async (bandUrl) => {
   const url = `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${bandUrl}&api_key=${lastfmKey}&format=json`
   try {
-    let response = await fetch(url)
-    let similarBands = await response.json()
-    let bandNames = await similarBands.similarartists.artist.map(band => band.name)
+    const response = await fetch(url)
+    const similarBands = await response.json()
+    const bandNames = await similarBands.similarartists.artist.map(band => band.name)
     return bandNames
   } catch(error) {
     return error.message
@@ -36,9 +36,9 @@ const tastediveGetSimilarBands = async (bandUrl) => {
   const proxyUrl = `https://cors-anywhere.herokuapp.com/`
   const url = `https://tastedive.com/api/similar?q=${bandUrl}&type=music&k=${tastediveKey}`
   try {
-    let response = await fetch(proxyUrl + url)
-    let similarBands = await response.json()
-    let bandNames = await similarBands.Similar.Results.map(band => band.Name)
+    const response = await fetch(proxyUrl + url)
+    const similarBands = await response.json()
+    const bandNames = await similarBands.Similar.Results.map(band => band.Name)
     return bandNames
   } catch(error) {
     return error.message
@@ -48,9 +48,9 @@ const tastediveGetSimilarBands = async (bandUrl) => {
 export const getBandTags = async (band) => {
   const url = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist=${band}&user=RJ&api_key=${lastfmKey}&format=json`
   try {
-    let response = await fetch(url)
-    let bandTags = await response.json()
-    let tags = await bandTags.toptags.tag.slice(0,10).map(tag => tag.name)
+    const response = await fetch(url)
+    const bandTags = await response.json()
+    const tags = await bandTags.toptags.tag.slice(0,10).map(tag => tag.name)
     return tags
   } catch(error) {
     return error.message
@@ -62,10 +62,11 @@ export const getEvents = async (urlString) => {
   try {
     const response = await fetch(url)
     const eventData = await response.json()
-    console.log(eventData)
-    const events = await cleanEvents(eventData)
-    console.log(events)
-    // const ImageUrls = await findImageUrls(events)
+    // const w = eventData._embedded.events
+    // console.log(eventData)
+    // console.log(w)
+    // console.log(typeof w)
+    return eventData._embedded.events
   } catch(error) {
     return error.message
   }

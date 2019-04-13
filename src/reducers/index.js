@@ -8,5 +8,5 @@ export const rootReducer = combineReducers({
   band,
   tags,
   similarBands,
-  // events
+  events
 })

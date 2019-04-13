@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { SearchParams } from '../SearchParams/SearchParams'
-import { makeBandUrl, makeDateUrl } from '../../helpers/infoCleaners'
+import { storeEvents } from '../../actions'
+import { makeBandUrl, makeDateUrl, cleanEvents } from '../../helpers/infoCleaners'
 import { getEvents } from '../../helpers/apiCalls'
 
 export class BandInfo extends Component {
@@ -13,7 +16,8 @@ export class BandInfo extends Component {
       state: '',
       city: '',
       startDate: '',
-      endDate: ''
+      endDate: '',
+      events: []
     }
   }
 
@@ -34,13 +38,13 @@ export class BandInfo extends Component {
     this.createUrl(searchItem)
   }
 
-  createUrl = (term) => {
+  createUrl = (keyword) => {
     const { state, city, startDate, endDate } = this.state
-    const keywordUrl = makeBandUrl(term)
+    const keywordUrl = makeBandUrl(keyword)
     let urlString = `keyword=${keywordUrl}`
     if (state) {
       const cleanState = makeBandUrl(state)
-      const stateUrl = `&state=${cleanState}`
+      const stateUrl = `&stateCode=${cleanState}`
       urlString = urlString + stateUrl
     }
     if (city) {
@@ -48,11 +52,44 @@ export class BandInfo extends Component {
       const cityUrl = `&city=${cleanCity}`
       urlString = urlString + cityUrl
     }
-    console.log(urlString)
-    getEvents(urlString)
-    // const startDateUrl = makeDateUrl(startDate)
-    // const endDateUrl = makeDateUrl(endDate) 
+    // if (startDate) {
+    //   const cleanStartDate = makeDateUrl(startDate)
+    //   const startDateUrl = `&startDateTime=${cleanStartDate}`
+    //   urlString = urlString + startDateUrl
+    // }
+    // if (endDate) {
+    //   const cleanEndDate = makeDateUrl(endDate) 
+    //   const endDateUrl = `&endDateTime=${cleanEndDate}`
+    //   urlString = urlString + endDateUrl
+    // }
+    // try {
+    this.findEvents(urlString)
+      // let events = await getEvents(urlString)
+      // console.log(events)
+      // this.setState({ events: events})
+      // this.props.storeEvents(this.state.events)
+    // } catch (error) {
+    //   return error.message
+    // }
     
+  }
+
+  findEvents = (url) => {
+    // let events = await getEvents(url)
+    // console.log(events)
+    // let cleanedEvents = cleanEvents(events)
+    // await this.setState({events})
+    // console.log(this.state.events)
+    // console.log(typeof this.state.events)
+    this.saveEvents(['hello', 'you'])
+    // let e = await cleanEvents(events)
+    // await this.setState({ events: e})
+    // console.log(e)
+    // this.props.storeEvents(events)
+  }
+
+  saveEvents = (events) => {
+    this.props.storeEvents(events)
   }
 
   render() {
@@ -75,3 +112,8 @@ export class BandInfo extends Component {
   }
 }
 
+export const mapDispatchToProps = (dispatch) => ({
+  storeEvents: (events) => dispatch(storeEvents(events))
+})
+
+export default connect(null, mapDispatchToProps)(BandInfo)

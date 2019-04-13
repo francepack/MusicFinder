@@ -3,7 +3,6 @@
 // }
 
 export const makeBandUrl = (band) => {
-  console.log(typeof band)
   const letters = band.split('')
   const url = letters.map(letter => {
     switch (letter) {
@@ -55,20 +54,18 @@ export const buildBandArray = (matchedBands, tastebands) => {
 }
 
 export const cleanEvents = (eventData) => {
-  const events = eventData._embedded.events.map(event => {
+  console.log(eventData)
+  return eventData.map(event => {
     console.log(event)
-    event = { 
+    return { 
       name: event.name, 
       eventUrl: event.eventUrl, 
       id: event.id, 
       date: event.dates.start.localDate,
-      venue: event._embedded.venue[0].name,
-      venueAddress: event._embedded.venue[0].address.line1,
-      city: event._embedded.venue[0].city.name,
-      image: 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
+      // venue: event._embedded.venue[0].name,
+      // venueAddress: event._embedded.venue[0].address.line1,
+      // city: event._embedded.venue[0].city.name,
+      // image: 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
       }
-      console.log(event.image)
-    return event
   })
-  return events
 }

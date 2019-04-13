@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import { storeBand, storeSimilarBands, storeBandTags } from '../../actions'
 import { getSimilarBands, getBandTags } from '../../helpers/apiCalls'
-import { cleanBand } from '../../helpers/infoCleaners'
 
 export class BandInput extends Component {
   constructor(props) {
