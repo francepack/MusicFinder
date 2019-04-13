@@ -62,12 +62,17 @@ export const getEvents = async (urlString) => {
   try {
     const response = await fetch(url)
     const eventData = await response.json()
+    let items = eventData._embedded.events
+    console.log(typeof items)
+    let events = eventData._embedded.events.map(event => cleanEvents(event))
     // const w = eventData._embedded.events
     // console.log(eventData)
     // console.log(w)
     // console.log(typeof w)
-    return eventData._embedded.events
+    // return eventData._embedded.events
+    return Promise.all(events)
   } catch(error) {
+    console.log('error?')
     return error.message
   }
 }

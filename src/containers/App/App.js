@@ -5,11 +5,14 @@ import './App.scss'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
 import { BandInfo } from '../../components/BandInfo/BandInfo'
+import { Events } from '../Events/Events'
 import { Route, withRouter, Link } from 'react-router-dom'
+import { storeEvents } from '../../actions'
+
 
 export class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state= {
       error: '',
       loading: false
@@ -23,6 +26,12 @@ export class App extends Component {
   setLoading = () => {
     this.setState({ loading: !this.state.loading })
   }
+
+  storeEvents = (events) => {
+    const { history } = this.props
+    this.props.storeEvents(events)
+    history.push('/events')
+  }
   
   render() {
     const { error, loading } = this.state
@@ -34,8 +43,8 @@ export class App extends Component {
         {this.state.loading && <Loading />}
         <Route exact path='/' />
         <Route path='/Loading' />
-        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} />}/>
-        <Route path='/events' />
+        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} storeEvents={this.storeEvents} />}/>
+        <Route path='/events' component={() => <Events events={this.props.events} /> }/>
       </div>
     )
   }
@@ -43,7 +52,17 @@ export class App extends Component {
 
 export const mapStateToProps = (state) => ({
   similarBands: state.similarBands,
-  tags: state.tags
+  tags: state.tags,
+  events: state.events
 })
 
-export default withRouter(connect(mapStateToProps, null)(App))
+export const mapDispatchToProps = (dispatch) => ({
+  storeEvents: (events) => dispatch(storeEvents(events))
+})
+
+App.propTypes = {
+  similarBands: PropTypes.array,
+  tags: PropTypes.array
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

@@ -1,4 +1,4 @@
-describe('band reducer', () => {
+describe('infoCleaners', () => {
   describe('', () => {
     it('should', () => {
       
