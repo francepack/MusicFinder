@@ -1,4 +1,5 @@
 .band-input {
+  @include inputs;
   text-indent: 4px;
   width: 40%;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const makeBandUrl = (band) => {
+export const makeUrlString= (band) => {
   const letters = band.split('')
   const url = letters.map(letter => {
     switch (letter) {
@@ -42,6 +42,16 @@ export const makeDateUrl = (date) => {
   
 }
 
+export const matchSimilarBands = (lastfmArr, tastediveArr) => {
+  return lastfmArr.reduce((acc, val) => {
+    let matchedBand = tastediveArr.find(band => {
+      return band === val
+    })
+    if (matchedBand) acc.push(matchedBand)
+    return acc
+  }, [])
+}
+
 export const buildBandArray = (matchedBands, tastebands) => {
   const arrayLength = matchedBands.length
   if (arrayLength === 10) {
@@ -80,7 +90,7 @@ export const cleanEvents = (event) => {
   if (event._embedded.attractions && event._embedded.attractions[0].image) {
     eventImg = 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
   } else {
-    eventImg = 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiiiN62uM7hAhULjVQKHU92CO4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.eventbrite.com%2Fblog%2Fsell-concert-tickets-ds0c%2F&psig=AOvVaw3Lc1KgZ3OYDn_v_uaAt6Lr&ust=1555291980473280'
+    eventImg = 'https://image.freepik.com/free-vector/blue-background-people-concert_23-2147604883.jpg'
   }
 
   return { 

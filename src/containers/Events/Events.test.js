@@ -1,5 +1,10 @@
 describe('Events', () => {
-  describe('', () => {
+  describe('Snapshots', () => {
+    it('should', () => {
+      
+    })
+  })
+  describe('build event cards', () => {
     it('should', () => {
       
     })

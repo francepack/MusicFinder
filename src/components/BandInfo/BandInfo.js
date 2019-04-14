@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { SearchParams } from '../SearchParams/SearchParams'
 import { storeEvents } from '../../actions'
-import { makeBandUrl, makeDateUrl, cleanEvents } from '../../helpers/infoCleaners'
+import { makeUrlString, makeDateUrl, cleanEvents } from '../../helpers/infoCleaners'
 import { getEvents } from '../../helpers/apiCalls'
 
 export class BandInfo extends Component {
@@ -41,7 +41,6 @@ export class BandInfo extends Component {
     let url = this.createUrl(searchItem)
     try {
       let events = await this.findEvents(url)
-      console.log(events)
       this.saveEvents(events)
     } catch(error) {
       console.log(error)
@@ -51,15 +50,15 @@ export class BandInfo extends Component {
 
   createUrl = (keyword) => {
     const { state, city, startDate, endDate } = this.state
-    const keywordUrl = makeBandUrl(keyword)
+    const keywordUrl = makeUrlString(keyword)
     let urlString = `keyword=${keywordUrl}`
     if (state) {
-      const cleanState = makeBandUrl(state)
+      const cleanState = makeUrlString(state)
       const stateUrl = `&stateCode=${cleanState}`
       urlString = urlString + stateUrl
     }
     if (city) {
-      const cleanCity = makeBandUrl(city)
+      const cleanCity = makeUrlString(city)
       const cityUrl = `&city=${cleanCity}`
       urlString = urlString + cityUrl
     }

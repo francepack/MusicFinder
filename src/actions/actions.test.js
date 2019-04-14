@@ -11,7 +11,7 @@ describe('actions', () => {
       expect(result).toEqual(expected)
     })
     it('should return an object with type "STORE_SIMILAR" with bands', () => {
-      const mockBands = [ {name: Weezer}, {name: Beatles}]
+      const mockBands = [ {name: 'Weezer'}, {name: 'Beatles'}]
       const expected = {
         type: 'STORE_SIMILAR',
         bands: mockBands

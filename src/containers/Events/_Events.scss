@@ -1,20 +1,21 @@
 .events-container {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-between;
+  // padding: 5%;
 }
 
 .event-card {
-  height: 400px;
-  // margin: 8% 0 0 8%;
-  width: 34%;
-
+  height: 300px;
+  width: 42.5%;
+  margin: 20px 0 20px 5%;
 }
 
 .background {
   background-color: #FFF;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100%;
   width: 100%;
 }

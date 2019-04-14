@@ -1,6 +1,9 @@
 // buttons
 @mixin btn {
   border: 0;
+  height: 32px;
+  position: relative;
+  bottom: 1px;
   &:focus {
     outline: none;
   }
@@ -8,6 +11,12 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+// inputs
+@mixin inputs {
+  border: 0;
+  height: 30px;
 }
 
 // links

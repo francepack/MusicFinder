@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-// import './App.scss'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
 import { BandInfo } from '../../components/BandInfo/BandInfo'
