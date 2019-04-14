@@ -76,12 +76,6 @@ export const getEvents = async (urlString) => {
         city: '',
         image: ''}]
     }
-    // const w = eventData._embedded.events
-    // console.log(eventData)
-    // console.log(w)
-    // console.log(typeof w)
-    // return eventData._embedded.events
-    console.log(events)
     return events
     // return Promise.all(events)
   } catch(error) {
@@ -101,62 +95,4 @@ export const getEvents = async (urlString) => {
 //     }
 //   })
 
-// }
-
-
-
-
-
-
-
-
-
-
-
-// export const getInfo = async () => {
-//   const url = `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=rock&api_key=${lastfmKey}&format=json`
-//   try {
-//     const response = await fetch(url)
-//     const info = await response.json()
-//     return info.topartists.artist.map(art => art.name)
-//   } catch (error) {
-//     return error.message
-//   }
-// }
-
-// export const getEventfulBandId = async () => {
-//   const url = `http://api.eventful.com/json/performers/search?app_key=${eventfulKey}&keywords=ween`
-//   const proxyurl = "https://cors-anywhere.herokuapp.com/"
-//   try {
-//     const response = await fetch(proxyurl + url)
-//     const info = await response.json()
-//     return info.performers.performer.map(art => art.id)
-//   } catch (error) {
-//     return error.message
-//   }
-// }
-
-// export const getDenverEvents = async () => {
-//   const url = `http://api.eventful.com/json/events/search?app_key=${eventfulKey}&category=music&l=Denver`
-//   const proxyurl = "https://cors-anywhere.herokuapp.com/"
-//   try {
-//     const response = await fetch(proxyurl + url)
-//     const info = await response.json()
-//     return info.events.event.map(event => event.title)
-//   } catch(error) {
-//     return error.message
-//   }
-// }
-
-
-// export const ticketmasterevents = async () => {
-//   const url = `https://app.ticketmaster.com/discovery/v1/events.json?apikey=${ticketmasterKey}`
-//   // const proxyurl = "https://cors-anywhere.herokuapp.com/"
-//   try {
-//     const response = await fetch(url)
-//     const info = await response.json()
-//     return info._embedded.events.map(event => event.name)
-//   } catch(error) {
-//     return error.message
-//   }
 // }

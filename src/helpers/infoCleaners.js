@@ -43,13 +43,6 @@ export const makeDateUrl = (date) => {
 }
 
 export const buildBandArray = (matchedBands, tastebands) => {
-  // switch (matchedBands.length) {
-  //   case 10:
-  //     return matchedBands
-  //   case 0:
-  //     return tastebands.slice(0, 10)
-  //   case < 10
-  // }
   const arrayLength = matchedBands.length
   if (arrayLength === 10) {
     return matchedBands
@@ -75,10 +68,6 @@ export const buildBandArray = (matchedBands, tastebands) => {
 }
 
 export const cleanEvents = (event) => {
-  // console.log(eventData)
-  // return eventData.map(event => {
-  //   console.log(event)
-  console.log(event)
   let venueName
   let venueCity
   let venueAddress
@@ -90,27 +79,42 @@ export const cleanEvents = (event) => {
   }
   if (event._embedded.attractions && event._embedded.attractions[0].image) {
     eventImg = 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
+  } else {
+    eventImg = 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiiiN62uM7hAhULjVQKHU92CO4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.eventbrite.com%2Fblog%2Fsell-concert-tickets-ds0c%2F&psig=AOvVaw3Lc1KgZ3OYDn_v_uaAt6Lr&ust=1555291980473280'
   }
 
-    return { 
-      name: event.name, 
-      eventUrl: event.eventUrl, 
-      id: event.id, 
-      date: event.dates.start.localDate,
-      venue: venueName,
-      venueAddress: venueAddress,
-      city: venueCity,
-      image: eventImg || ('https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiiiN62uM7hAhULjVQKHU92CO4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.eventbrite.com%2Fblog%2Fsell-concert-tickets-ds0c%2F&psig=AOvVaw3Lc1KgZ3OYDn_v_uaAt6Lr&ust=1555291980473280')
-      }
-  // })
+  return { 
+    name: event.name, 
+    eventUrl: event.eventUrl, 
+    id: event.id, 
+    date: event.dates.start.localDate,
+    venue: venueName,
+    venueAddress: venueAddress,
+    city: venueCity,
+    image: eventImg
+  }
+  
 }
 
 export const buildCards = (events) => {
-  return events.map(event => {
-    return(
-      <div>
-        <h3>{event.name}</h3>
-      </div>
-    )
-  })
+  console.log(events)
+  if (events.length) {
+    return events.map(event => {
+      const background = { backgroundImage: `url(${event.image})`}
+      return(
+        <div className='event-card' key={event.id}>
+          <a href={event.eventUrl} target='_blank'>
+            <div className='background' style={background}>
+              <div className='overlay'>
+                <h3>{event.name}</h3>
+                <p>{event.date}</p>
+                <p>{event.city}</p>
+                <p>{event.venue}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      )
+    })
+  }
 }

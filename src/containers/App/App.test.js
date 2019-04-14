@@ -1,11 +1,12 @@
-import React, { shallow } from 'react'
+import React from 'react'
+import { shallow } from 'enzyme'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-let wrapper
 
 describe('App', () => {
-  BeforeEach(() => {
+  let wrapper
+  beforeEach(() => {
     wrapper = shallow(
       <App />
     )
@@ -15,7 +16,7 @@ describe('App', () => {
       expect(wrapper).toMatchSnapshot()
     })
     it('should match snapshot when error is present', () => {
-      App.setState({ error: 'Fetch call failed' })
+      wrapper.setState({ error: 'Fetch call failed' })
       expect(wrapper).toMatchSnapshot()
     })
     it('should have default state', () => {
