@@ -1,0 +1,8 @@
+.band-input {
+  text-indent: 4px;
+  width: 40%;
+}
+
+.submit-btn {
+  @include btn
+}

@@ -1,0 +1,22 @@
+// buttons
+@mixin btn {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// links
+@mixin links {
+  text-decoration: none;
+  &:link {
+    color: inherit;
+  }
+  &:visited {
+    color: inherit;
+  }
+}

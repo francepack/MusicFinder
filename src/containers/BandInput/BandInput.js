@@ -66,9 +66,9 @@ export class BandInput extends Component {
   render() {
     return(
       <form onSubmit={this.handleSubmit}>
-        <input  className='bandInput'
+        <input  className='band-input'
                 name='bandInput'
-                placeholder='Enter Your Favorite Band'
+                placeholder='Enter a Band'
                 defaultValue={this.state.bandInput}
                 onKeyUp={this.handleChange}
                 >

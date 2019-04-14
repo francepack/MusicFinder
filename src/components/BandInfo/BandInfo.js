@@ -130,15 +130,17 @@ export class BandInfo extends Component {
     return(
       <div>
         <SearchParams collectSearchParams={this.collectSearchParams} />
-        <p>Click below to make a search</p>
-        <ul>
-          <li>Similar Bands</li>
-          {similarBands}
-        </ul>
-        <ul>
-          <li>Other Interests</li>
-          {tags}
-        </ul>
+        <h4>Click a search term below</h4>
+        <div className='keywords'>
+          <ul className='bands-list'>
+            <li className='list-head'>Similar Bands</li>
+            {similarBands}
+          </ul>
+          <ul className='tags-list'>
+            <li className='list-head'>Associated terms</li>
+            {tags}
+          </ul>
+        </div>
       </div>
     )
   }

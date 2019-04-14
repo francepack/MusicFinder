@@ -19,7 +19,7 @@ export class SearchParams extends Component {
     const {state, city, startDate, endDate } = this.state
     return(
       <div>
-        <h1>Search for events based on similar bands</h1>
+        <h3>Search for events based on similar bands</h3>
         <label>State</label>
         <input defaultValue={state} name='state' maxLength={2} onKeyUp={this.handleChange}></input>
         <label>City</label>

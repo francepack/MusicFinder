@@ -14,14 +14,17 @@ export class Events extends Component {
     // buildCards(events)
     if (events.length) {
       return events.map(event => {
+        const background = { backgroundImage: `url(${event.image})`}
         return(
-          <div key={event.id}>
+          <div className='event-card' key={event.id}>
             <a href={event.eventUrl} target='_blank'>
-              <div backgroundimage={event.image}>
-                <h3>{event.name}</h3>
-                <p>{event.date}</p>
-                <p>{event.city}</p>
-                <p>{event.venue}</p>
+              <div className='background' style={background}>
+                <div className='overlay'>
+                  <h3>{event.name}</h3>
+                  <p>{event.date}</p>
+                  <p>{event.city}</p>
+                  <p>{event.venue}</p>
+                </div>
               </div>
             </a>
           </div>
@@ -42,7 +45,7 @@ export class Events extends Component {
     //   events = this.props.events.map(event => <p>{event.name}</p>)
     // }
     return(
-      <div>
+      <div className='events-container'>
         {renderEvents}
       </div>
     )

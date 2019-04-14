@@ -1,0 +1,26 @@
+.events-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-card {
+  height: 400px;
+  // margin: 8% 0 0 8%;
+  width: 34%;
+
+}
+
+.background {
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  background: rgba(255,255,255,.6);
+  height: 100%;
+  left: 0;
+}

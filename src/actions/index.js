@@ -18,7 +18,7 @@ export const storeEvents = (events) => ({
   events
 })
 
-export const isLoading = (bool) => ({
-  type: 'IS_LOADING',
-  bool
-})
+// export const isLoading = (bool) => ({
+//   type: 'IS_LOADING',
+//   bool
+// })

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import './App.scss'
+// import './App.scss'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
 import { BandInfo } from '../../components/BandInfo/BandInfo'
@@ -37,7 +37,9 @@ export class App extends Component {
     const { error, loading } = this.state
     return (
       <div className='App'>
-        <h1>MusicFinder</h1>
+        <Link to='/' >
+          <h1>MusicFinder</h1>
+        </Link>
         <BandInput setError={this.setError} setLoading={this.setLoading} />
         {error && error}
         {this.state.loading && <Loading />}
