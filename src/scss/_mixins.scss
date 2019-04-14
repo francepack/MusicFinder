@@ -1,11 +1,14 @@
 // buttons
 @mixin btn {
   border: 0;
-  height: 32px;
+  height: 37px;
   position: relative;
   bottom: 1px;
+  background-color: $greyBlue;
+  color: $almond;
   &:focus {
     outline: none;
+    
   }
 
   &:hover {
@@ -15,8 +18,15 @@
 
 // inputs
 @mixin inputs {
+  background-color: $teal;
   border: 0;
-  height: 30px;
+  color: $greenBlue;
+  height: 35px;
+  &:focus {
+    background-color: $teal;
+    color: $greenBlue;
+    outline: none;
+  }
 }
 
 // links

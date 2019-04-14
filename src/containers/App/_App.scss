@@ -1,3 +1,7 @@
+html {
+ 
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +34,16 @@ h1 {
   font-size: 320%;
   margin-top: 0; 
   padding: 40px 0;
+}
+
+.instructions {
+  color: $darkPlat;
+  cursor: default;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.instructions p {
+  margin-bottom: 20px;
+  line-height: 28px;
 }

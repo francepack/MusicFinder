@@ -36,10 +36,19 @@ export class App extends Component {
     const { error, loading } = this.state
     return (
       <div className='App'>
-        <Link to='/' >
-          <h1>MusicFinder</h1>
-        </Link>
+        <h1>
+          <Link to='/'>
+            MusicFinder
+          </Link>
+        </h1>
         <BandInput setError={this.setError} setLoading={this.setLoading} />
+        {!this.props.tags.length && 
+          <div className='instructions'>
+            <p>Type in the name of your favorite band above.</p>
+            <p>Submit to find similar bands and descriptions of that band.</p>
+            <p>Click on any results to search for Events that may interest you.</p>
+          </div>
+        }
         {error && error}
         {this.state.loading && <Loading />}
         <Route exact path='/' />

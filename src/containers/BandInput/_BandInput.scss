@@ -1,9 +1,16 @@
+form {
+  margin-top: 60px;
+}
+
 .band-input {
   @include inputs;
-  text-indent: 4px;
+  border-radius: 10px 0 0 10px; 
+  text-indent: 6px;
   width: 40%;
 }
 
 .submit-btn {
   @include btn
+  border-radius: 0 10px 10px 0;
+  width: 80px;
 }
