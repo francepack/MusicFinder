@@ -1,14 +1,35 @@
-// export const cleanBand = (band) => {
-//   return band.toLowerCase()
-// }
+import React from 'react'
 
 export const makeBandUrl = (band) => {
   const letters = band.split('')
   const url = letters.map(letter => {
     switch (letter) {
       case ' ':
-        letter = '+'
-        return letter
+        return '+'
+      case '!':
+        return '%21'
+      case '"':
+        return '%22'
+      case '#':
+        return '%23'
+      case '$':
+        return '%24'
+      case '%':
+        return '%25'
+      case '&':
+        return '%26'
+      case "'":
+        return '%27'
+      case '(':
+        return '%28'
+      case ')':
+        return '%29'
+      case '*':
+        return '%2A'
+      case '+':
+        return '%2B'
+      case '/':
+        return '%2F'
       default:
         return letter
     }
@@ -53,19 +74,43 @@ export const buildBandArray = (matchedBands, tastebands) => {
   }
 }
 
-export const cleanEvents = (eventData) => {
+export const cleanEvents = (event) => {
   // console.log(eventData)
   // return eventData.map(event => {
   //   console.log(event)
+  console.log(event)
+  let venueName
+  let venueCity
+  let venueAddress
+  let eventImg
+  if (event._embedded.venue) {
+    venueName = event._embedded.venue[0].name
+    venueCity = event._embedded.venue[0].city.name
+    venueAddress = event._embedded.venue[0].address.line1
+  }
+  if (event._embedded.attractions && event._embedded.attractions[0].image) {
+    eventImg = 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
+  }
+
     return { 
-      name: eventData.name, 
-      eventUrl: eventData.eventUrl, 
-      id: eventData.id, 
-      date: eventData.dates.start.localDate,
-      // venue: event._embedded.venue[0].name,
-      // venueAddress: event._embedded.venue[0].address.line1,
-      // city: event._embedded.venue[0].city.name,
-      // image: 'https://s1.ticketm.net' + event._embedded.attractions[0].image.url
+      name: event.name, 
+      eventUrl: event.eventUrl, 
+      id: event.id, 
+      date: event.dates.start.localDate,
+      venue: venueName,
+      venueAddress: venueAddress,
+      city: venueCity,
+      image: eventImg || ('https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiiiN62uM7hAhULjVQKHU92CO4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.eventbrite.com%2Fblog%2Fsell-concert-tickets-ds0c%2F&psig=AOvVaw3Lc1KgZ3OYDn_v_uaAt6Lr&ust=1555291980473280')
       }
   // })
+}
+
+export const buildCards = (events) => {
+  return events.map(event => {
+    return(
+      <div>
+        <h3>{event.name}</h3>
+      </div>
+    )
+  })
 }

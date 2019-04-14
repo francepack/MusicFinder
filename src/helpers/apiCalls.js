@@ -3,6 +3,7 @@ import { makeBandUrl, buildBandArray, cleanEvents } from './infoCleaners'
 
 export const getSimilarBands = async (band) => {
   let bandUrl = makeBandUrl(band)
+  console.log(bandUrl)
   try {
     let tastediveBands = await tastediveGetSimilarBands(bandUrl)
     let lastfmBands = await lastfmGetSimilarBands(bandUrl)
@@ -62,17 +63,29 @@ export const getEvents = async (urlString) => {
   try {
     const response = await fetch(url)
     const eventData = await response.json()
-    let items = eventData._embedded.events
-    console.log(typeof items)
-    let events = eventData._embedded.events.map(event => cleanEvents(event))
+    let events
+    if (eventData._embedded) {
+      events = eventData._embedded.events.map(event => cleanEvents(event))
+    } else {
+      events = [{name: 'No Events found', 
+        eventUrl: '', 
+        id: '404', 
+        date: '',
+        venue: '',
+        venueAddress: '',
+        city: '',
+        image: ''}]
+    }
     // const w = eventData._embedded.events
     // console.log(eventData)
     // console.log(w)
     // console.log(typeof w)
     // return eventData._embedded.events
-    return Promise.all(events)
+    console.log(events)
+    return events
+    // return Promise.all(events)
   } catch(error) {
-    console.log('error?')
+    console.log(error)
     return error.message
   }
 }
