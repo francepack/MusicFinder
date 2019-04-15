@@ -63,11 +63,11 @@ export const buildBandArray = (matchedBands, tastebands, lastfmbands) => {
   if (arrayLength === 10) {
     return matchedBands
   } else if (arrayLength === 0) {
-    if (tastebands) {
+    if (tastebands.length) {
       return tastebands.slice(0, 10)
-    } else if (!tastebands && lastfmbands) {
+    } else if (!tastebands.length && lastfmbands.length) {
       return tastebands.slice(0, 10)
-    } else if (!tastebands && !lastfmbands) {
+    } else if (!tastebands.length && !lastfmbands.length) {
       return []
     }
   } else if (arrayLength > 10) {

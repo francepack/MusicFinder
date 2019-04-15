@@ -24,6 +24,9 @@ export const lastfmGetSimilarBands = async (bandUrl) => {
   try {
     const response = await fetch(url)
     const similarBands = await response.json()
+    if (similarBands.error) {
+      return []
+    }
     const bandNames = similarBands.similarartists.artist.map(band => band.name)
     return bandNames
   } catch(error) {
@@ -50,7 +53,7 @@ export const getBandTags = async (band) => {
     const response = await fetch(url)
     const bandTags = await response.json()
     let tags
-    if (bandTags.length) {
+    if (bandTags.toptags) {
       tags = bandTags.toptags.tag.slice(0,10).map(tag => tag.name)
     } else {
       tags = []

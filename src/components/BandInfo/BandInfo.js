@@ -23,8 +23,7 @@ export class BandInfo extends Component {
   }
 
   renderKeywords = (keywords) => {
-    console.log(keywords)
-    if (typeof keywords === 'object') {
+    if (typeof keywords === 'object' && keywords.length) {
       return keywords.map((keyword, i) => {
         return(
           <li key={keyword + i}> 
