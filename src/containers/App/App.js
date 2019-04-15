@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
-import { BandInfo } from '../../components/BandInfo/BandInfo'
+import BandInfo from '../../components/BandInfo/BandInfo'
 import { Events } from '../Events/Events'
 import { Route, withRouter, Link } from 'react-router-dom'
 import { storeEvents } from '../../actions'
@@ -26,11 +26,11 @@ export class App extends Component {
     this.setState({ loading: !this.state.loading })
   }
 
-  storeEvents = (events) => {
-    const { history } = this.props
-    this.props.storeEvents(events)
-    history.push('/events')
-  }
+  // storeEvents = (events) => {
+  //   const { history } = this.props
+  //   this.props.storeEvents(events)
+  //   history.push('/events')
+  // }
   
   render() {
     const { error, loading } = this.state
@@ -53,7 +53,7 @@ export class App extends Component {
         {this.state.loading && <Loading />}
         <Route exact path='/' />
         <Route path='/Loading' />
-        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} band={this.props.band} tags={this.props.tags} storeEvents={this.storeEvents} />}/>
+        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} />}/>
         <Route path='/events' component={() => <Events events={this.props.events} /> }/>
       </div>
     )
@@ -61,14 +61,13 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  band: state.band,
   similarBands: state.similarBands,
   tags: state.tags,
   events: state.events
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  storeEvents: (events) => dispatch(storeEvents(events))
+  // storeEvents: (events) => dispatch(storeEvents(events))
 })
 
 App.propTypes = {
