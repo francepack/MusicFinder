@@ -73,14 +73,16 @@ export const getEvents = async (urlString) => {
     if (eventData._embedded) {
       events = eventData._embedded.events.map(event => cleanEvents(event))
     } else {
-      events = [{name: 'No Events found', 
+      events = [{
+        name: 'No Events found', 
         eventUrl: '', 
         id: '404', 
         date: '',
-        venue: '',
+        venue: 'NA',
         venueAddress: '',
-        city: '',
-        image: ''}]
+        city: 'NA',
+        image: 'http://euchc.org/wp-content/uploads/2018/03/no-event-scheduled.png'
+      }]
     }
     return events
   } catch(error) {

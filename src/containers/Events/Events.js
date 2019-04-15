@@ -4,11 +4,6 @@ import { connect } from 'react-redux'
 import { buildCards } from '../../helpers/infoCleaners'
 
 export class Events extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-    }
-  }
 
   buildEventCards = (events) => {
     let cards = buildCards(events)
@@ -23,19 +18,18 @@ export class Events extends Component {
     }
   
     return(
-      <div className='events-container'>
+      <div className='events-section'>
         {renderEvents}
-        {renderEvents && <Link to='./'><button className='return-btn'>Return</button></Link>}
+        {renderEvents && 
+          <Link to='./'><button className='return-btn'>Return</button></Link>
+        }
       </div>
     )
   }
 }
 
+export const mapStateToProps = (state) => ({
+  events: state.events
+})
 
-
-// export const mapStateToProps = (state) => ({
-//   // events: state.events
-// })
-
-export default Events
-// export default connect(mapStateToProps, null)(Events)
+export default connect(mapStateToProps, null)(Events)

@@ -119,30 +119,54 @@ export const cleanEvents = (event) => {
 }
 
 export const buildCards = (events) => {
-  console.log(events)
-  if (events.length) {
-    return events.map(event => {
-      const background = { backgroundImage: `url(${event.image})`}
-      return(
-        <div className='event-card' key={event.id}>
-          <a href={event.eventUrl} target='_blank'>
-            <div className='background' style={background}>
-              <div className='overlay'>
-                <div className='card-details'>
-                  <div className='top-details'>
-                    <h3>{event.name}</h3>
-                    <p>{event.date}</p>
-                  </div>
-                  <div className='bottom-details'>
-                    <p>City: {event.city}</p>
-                    <p>Venue: {event.venue}</p>
-                  </div>
+  if (events.length === 1) {
+    const event = events[0]
+    const background = { backgroundImage: `url(${event.image})`}
+    return(
+      <div className='single'>
+      <div className='single-event-card' key={event.id}>
+        <a href={event.eventUrl} target='_blank'>
+          <div className='background' style={background}>
+            <div className='overlay'>
+              <div className='card-details'>
+                <div className='top-details'>
+                  <h3>{event.name}</h3>
+                  <p>{event.date}</p>
+                </div>
+                <div className='bottom-details'>
+                  <p>City: {event.city}</p>
+                  <p>Venue: {event.venue}</p>
                 </div>
               </div>
             </div>
-          </a>
-        </div>
-      )
-    })
+          </div>
+        </a>
+      </div>
+      </div>
+    )
   }
+  const cards = events.map(event => {
+    const background = { backgroundImage: `url(${event.image})`}
+    return(
+      <div className='event-card' key={event.id}>
+        <a href={event.eventUrl} target='_blank'>
+          <div className='background' style={background}>
+            <div className='overlay'>
+              <div className='card-details'>
+                <div className='top-details'>
+                  <h3>{event.name}</h3>
+                  <p>{event.date}</p>
+                </div>
+                <div className='bottom-details'>
+                  <p>City: {event.city}</p>
+                  <p>Venue: {event.venue}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    )
+  })
+  return(<div className='events-container'>{cards}</div>)
 }

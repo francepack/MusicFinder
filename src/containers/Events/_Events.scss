@@ -29,11 +29,8 @@
   left: 0;
 }
 
-.event-card {
-  color: $royal;
-};
-
 .card-details {
+  color: $royal;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -54,4 +51,19 @@
 .return-btn {
   @include btn;
   border-radius: 10px;
+  margin: 30px 0 60px 0;
+}
+
+.single {
+
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.single-event-card {
+  border-radius: 10px;
+  border: 3px solid $wood;
+  height: 300px;
+  width: 42.5%;
 }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
 import BandInfo from '../../components/BandInfo/BandInfo'
-import { Events } from '../Events/Events'
+import Events from '../Events/Events'
 import { Route, withRouter, Link } from 'react-router-dom'
 import { storeEvents } from '../../actions'
 
@@ -65,13 +65,9 @@ export const mapStateToProps = (state) => ({
   events: state.events
 })
 
-export const mapDispatchToProps = (dispatch) => ({
-  // storeEvents: (events) => dispatch(storeEvents(events))
-})
-
 App.propTypes = {
   similarBands: PropTypes.array,
   tags: PropTypes.array
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default withRouter(connect(mapStateToProps, null)(App))
