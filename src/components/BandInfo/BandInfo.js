@@ -23,16 +23,23 @@ export class BandInfo extends Component {
   }
 
   renderKeywords = (keywords) => {
-    return keywords.map((keyword, i) => {
+    console.log(keywords)
+    if (typeof keywords === 'object') {
+      return keywords.map((keyword, i) => {
+        return(
+          <li key={keyword + i}> 
+            <div className='search-term' 
+                onClick={() => this.handleClick(keyword)}>
+              {keyword}
+            </div>
+          </li>
+        )
+      })
+    } else {
       return(
-        <li key={keyword + i}> 
-          <div className='search-term' 
-              onClick={() => this.handleClick(keyword)}>
-            {keyword}
-          </div>
-        </li>
+        <li>No results found</li>
       )
-    })
+    }
   }
 
   handleClick = (searchItem) => {
@@ -109,7 +116,9 @@ export class BandInfo extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  band: state.band
+  band: state.band,
+  similarBands: state.similarBands,
+  tags: state.tags
 })
 
 export const mapDispatchToProps = (dispatch) => ({

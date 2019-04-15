@@ -6,8 +6,13 @@ export const getSimilarBands = async (band) => {
   try {
     let tastediveBands = await tastediveGetSimilarBands(bandUrl)
     let lastfmBands = await lastfmGetSimilarBands(bandUrl)
-    let similarBands = matchSimilarBands(lastfmBands, tastediveBands)
-    let bandsArray = buildBandArray(similarBands, tastediveBands) 
+    let similarBands
+    if (lastfmBands.length || tastediveBands.length) {
+      similarBands = matchSimilarBands(lastfmBands, tastediveBands)
+    } else {
+      similarBands = []
+    }
+    let bandsArray = buildBandArray(similarBands, tastediveBands, lastfmBands) 
     return bandsArray
   } catch(error) {
     return error.message
@@ -44,7 +49,12 @@ export const getBandTags = async (band) => {
   try {
     const response = await fetch(url)
     const bandTags = await response.json()
-    const tags = bandTags.toptags.tag.slice(0,10).map(tag => tag.name)
+    let tags
+    if (bandTags.length) {
+      tags = bandTags.toptags.tag.slice(0,10).map(tag => tag.name)
+    } else {
+      tags = []
+    }
     return tags
   } catch(error) {
     return error.message

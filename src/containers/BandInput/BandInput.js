@@ -40,8 +40,8 @@ export class BandInput extends Component {
       const { history } = this.props
       let similarBands = await this.searchSimilarBands(band)
       let bandTags = await this.searchForBandTags(band)
-      await this.props.storeSimilarBands(similarBands)
-      await this.props.storeBandTags(bandTags)
+      this.props.storeSimilarBands(similarBands)
+      this.props.storeBandTags(bandTags)
       await history.push('/band-info')
       this.props.setLoading()
     } catch(error) {

@@ -53,7 +53,7 @@ export class App extends Component {
         {this.state.loading && <Loading />}
         <Route exact path='/' />
         <Route path='/Loading' />
-        <Route path='/band-info' component={() => <BandInfo similarBands={this.props.similarBands} tags={this.props.tags} />}/>
+        <Route path='/band-info' component={() => <BandInfo />}/>
         <Route path='/events' component={() => <Events events={this.props.events} /> }/>
       </div>
     )
@@ -61,7 +61,6 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  similarBands: state.similarBands,
   tags: state.tags,
   events: state.events
 })

@@ -43,21 +43,33 @@ export const makeDateUrl = (date) => {
 }
 
 export const matchSimilarBands = (lastfmArr, tastediveArr) => {
-  return lastfmArr.reduce((acc, val) => {
-    let matchedBand = tastediveArr.find(band => {
-      return band === val
-    })
-    if (matchedBand) acc.push(matchedBand)
-    return acc
-  }, [])
+  if ( lastfmArr.length && tastediveArr.length) {
+    return lastfmArr.reduce((acc, val) => {
+      let matchedBand = tastediveArr.find(band => {
+        return band === val
+      })
+      if (matchedBand) acc.push(matchedBand)
+      return acc
+    }, [])
+  } else if (!lastfmArr.length && tastediveArr.length) {
+    return tastediveArr.slice(0, 10)
+  } else if (!tastediveArr.length && lastfmArr.length) {
+    return lastfmArr.slice(0, 10)
+  }
 }
 
-export const buildBandArray = (matchedBands, tastebands) => {
+export const buildBandArray = (matchedBands, tastebands, lastfmbands) => {
   const arrayLength = matchedBands.length
   if (arrayLength === 10) {
     return matchedBands
   } else if (arrayLength === 0) {
-    return tastebands.slice(0, 10)
+    if (tastebands) {
+      return tastebands.slice(0, 10)
+    } else if (!tastebands && lastfmbands) {
+      return tastebands.slice(0, 10)
+    } else if (!tastebands && !lastfmbands) {
+      return []
+    }
   } else if (arrayLength > 10) {
     return matchedBands.slice(0, 10)
   } else if (arrayLength < 10) {
