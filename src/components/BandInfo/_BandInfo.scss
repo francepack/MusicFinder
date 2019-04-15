@@ -1,13 +1,42 @@
+.search-area {
+  color: $darkPlat;
+  padding-bottom: 40px;
+}
+
+.search-area span {
+  text-decoration: underline;
+  &:hover {
+    color: $lavender;
+    cursor: pointer;
+  }
+}
+
 .keywords {
   display: flex;
   justify-content: space-around;
 }
 
 ul {
+  align-items: center;
+  // border: 3px solid $wood;
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 50%
+}
+
+.search-term {
+  margin-bottom: 5px;
+  &:hover {
+    color: $lavender;
+    cursor: pointer;
+  }
 }
 
 .list-head {
-  text-decoration: underline;
   font-size: 150%;
+  margin-bottom: 15px;
+  text-decoration: underline;
 }

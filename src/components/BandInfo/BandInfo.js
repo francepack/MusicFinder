@@ -26,11 +26,11 @@ export class BandInfo extends Component {
 
   renderSimilarBands = (bands) => {
     return bands.map(band => {
-      return <li key={band}> <div onClick={() => this.handleClick(band)}>{band}</div></li>})
+      return <li key={band}> <div className='search-term' onClick={() => this.handleClick(band)}>{band}</div></li>})
   }
 
   renderTags = (tags) => {
-    return tags.map(tag => <li key={tag}> <div onClick={() => this.handleClick(tag)}>{tag}</div></li>)
+    return tags.map(tag => <li key={tag}> <div className='search-term' onClick={() => this.handleClick(tag)}>{tag}</div></li>)
   }
 
   handleClick = (searchItem) => {
@@ -51,7 +51,7 @@ export class BandInfo extends Component {
   createUrl = (keyword) => {
     const { state, city, startDate, endDate } = this.state
     const keywordUrl = makeUrlString(keyword)
-    let urlString = `keyword=${keywordUrl}`
+    let urlString = `classificationName=music&keyword=${keywordUrl}`
     if (state) {
       const cleanState = makeUrlString(state)
       const stateUrl = `&stateCode=${cleanState}`
@@ -124,19 +124,21 @@ export class BandInfo extends Component {
   }
 
   render() {
+    // console.log(this.props.band)
     const similarBands = this.renderSimilarBands(this.props.similarBands)
     const tags = this.renderTags(this.props.tags)
     return(
-      <div>
+      <div className='search-area'>
         <SearchParams collectSearchParams={this.collectSearchParams} />
         <h4>Click a search term below</h4>
+        <p>Terms related to <span onClick={() => this.handleClick(this.props.band)}>{this.props.band}</span></p>
         <div className='keywords'>
           <ul className='bands-list'>
             <li className='list-head'>Similar Bands</li>
             {similarBands}
           </ul>
           <ul className='tags-list'>
-            <li className='list-head'>Associated terms</li>
+            <li className='list-head'>Associated Terms</li>
             {tags}
           </ul>
         </div>
@@ -145,8 +147,12 @@ export class BandInfo extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  // band: state.band
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   // storeEvents: (events) => dispatch(storeEvents(events))
 })
 
-export default connect(null, mapDispatchToProps)(BandInfo)
+export default connect(mapStateToProps, mapDispatchToProps)(BandInfo)

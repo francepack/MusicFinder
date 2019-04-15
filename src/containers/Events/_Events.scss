@@ -1,14 +1,15 @@
 .events-container {
   flex-wrap: wrap;
   display: flex;
-  // justify-content: space-between;
-  // padding: 5%;
+  padding-top: 20px;
 }
 
 .event-card {
+  border-radius: 10px;
+  border: 3px solid $wood;
   height: 300px;
-  width: 42.5%;
   margin: 20px 0 20px 5%;
+  width: 42.5%;
 }
 
 .background {
@@ -16,12 +17,41 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
   height: 100%;
   width: 100%;
 }
 
 .overlay {
-  background: rgba(255,255,255,.6);
+  background: rgba(255,255,255,.7);
+  border-radius: 7px;
   height: 100%;
   left: 0;
+}
+
+.event-card {
+  color: $royal;
+};
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-details p {
+  padding: 0 20px;
+}
+
+.event-card h3 {
+  font-family: $fancyFont;
+  margin: 0;
+  padding: 20px 20px 0 20px;
+}
+
+.return-btn {
+  @include btn;
+  border-radius: 10px;
 }

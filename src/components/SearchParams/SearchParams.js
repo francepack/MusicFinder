@@ -17,24 +17,34 @@ export class SearchParams extends Component {
     return(
       <div className='params'>
         <h3>Search for events based on similar bands or terms</h3>
-        <label>State
-        <input name='state' 
-               maxLength={2} 
-               onKeyUp={this.handleChange}>
-        </input></label>
-        <label>City
-        <input name='city' 
-               maxLength={35} 
-               onKeyUp={this.handleChange}>
-        </input></label>
-        <label>Events after...
-        <input name='startDate' 
-               onKeyUp={this.handleChange}>
-        </input></label>
-        <label>Events Before...
-        <input name='endDate' 
-               onKeyUp={this.handleChange}>
-        </input></label>
+        <div className='param-inputs'>
+          <div className='location-inputs'>
+            <label>State Code <br />
+            <input name='state'
+                   placeholder='Ex. CO' 
+                   maxLength={2} 
+                   onKeyUp={this.handleChange}>
+            </input></label>
+            <label>City <br />
+            <input name='city' 
+                   placeholder='Ex. Denver'
+                   maxLength={35} 
+                   onKeyUp={this.handleChange}>
+            </input></label>
+          </div>
+          <div className='date-inputs'>
+            <label>Show events after: <br />
+            <input name='startDate'
+                   placeholder='Ex. 11/29/2019' 
+                   onKeyUp={this.handleChange}>
+            </input></label>
+            <label>Show events before: <br />
+            <input name='endDate' 
+                   placeholder='Ex. 8/6/2020'
+                   onKeyUp={this.handleChange}>
+            </input></label>
+          </div>
+        </div>
       </div>
     )
   }

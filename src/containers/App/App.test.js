@@ -5,9 +5,10 @@ import { App } from './App'
 
 describe('App', () => {
   let wrapper
+  const mockTags = ['cool', 'rock', 'alternative']
   beforeEach(() => {
     wrapper = shallow(
-      <App />
+      <App {...mockTags} />
     )
   })
   describe('app', () => {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { buildCards } from '../../helpers/infoCleaners'
 
@@ -24,6 +25,7 @@ export class Events extends Component {
     return(
       <div className='events-container'>
         {renderEvents}
+        {renderEvents && <Link to='./'><button className='return-btn'>Return</button></Link>}
       </div>
     )
   }

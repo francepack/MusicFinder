@@ -116,10 +116,16 @@ export const buildCards = (events) => {
           <a href={event.eventUrl} target='_blank'>
             <div className='background' style={background}>
               <div className='overlay'>
-                <h3>{event.name}</h3>
-                <p>{event.date}</p>
-                <p>{event.city}</p>
-                <p>{event.venue}</p>
+                <div className='card-details'>
+                  <div className='top-details'>
+                    <h3>{event.name}</h3>
+                    <p>{event.date}</p>
+                  </div>
+                  <div className='bottom-details'>
+                    <p>City: {event.city}</p>
+                    <p>Venue: {event.venue}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </a>
