@@ -139,12 +139,12 @@ export const buildCards = (events) => {
     const event = events[0]
     const background = { backgroundImage: `url(${event.image})`}
     return(
-      <div className='single'>
-        <div className='single-event-card' key={event.id}>
+      <main className='single'>
+        <section className='single-event-card' key={event.id}>
           <a href={event.eventUrl} target='_blank'>
             <div className='background' style={background}>
               <div className='overlay'>
-                <div className='card-details'>
+                <article className='card-details'>
                   <div className='top-details'>
                     <h3>{event.name}</h3>
                     <p>{event.date}</p>
@@ -153,22 +153,22 @@ export const buildCards = (events) => {
                     <p>City: {event.city}</p>
                     <p>Venue: {event.venue}</p>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </a>
-        </div>
-      </div>
+        </section>
+      </main>
     )
   }
   const cards = events.map(event => {
     const background = { backgroundImage: `url(${event.image})`}
     return(
-      <div className='event-card' key={event.id}>
+      <section className='event-card' key={event.id}>
         <a href={event.eventUrl} target='_blank'>
           <div className='background' style={background}>
             <div className='overlay'>
-              <div className='card-details'>
+              <article className='card-details'>
                 <div className='top-details'>
                   <h3>{event.name}</h3>
                   <p>{event.date}</p>
@@ -177,14 +177,14 @@ export const buildCards = (events) => {
                   <p>City: {event.city}</p>
                   <p>Venue: {event.venue}</p>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </a>
-      </div>
+      </section>
     )
   })
-  return(<div className='events-container'>{cards}</div>)
+  return(<main className='events-container'>{cards}</main>)
 }
 
 export const createUrlString = (keyword, state, city, startDate, endDate) => {

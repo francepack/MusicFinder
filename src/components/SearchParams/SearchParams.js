@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import connect from 'react-redux'
 
 export class SearchParams extends Component {
 
@@ -49,8 +48,8 @@ export class SearchParams extends Component {
       </div>
     )
   }
+} 
 
-  SearchParams.propTypes = {
-    collectSearchParams: PropTypes.func
-  }  
+SearchParams.propTypes = {
+  collectSearchParams: PropTypes.func
 }

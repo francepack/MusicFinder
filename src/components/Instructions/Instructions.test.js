@@ -1,12 +1,12 @@
 import React from 'react'
-import Loading from './Loading'
+import Instructions from './Instructions'
 import { shallow } from 'enzyme'
 
-describe('Loading', () => {
+describe('Instructions', () => {
   describe('snapshot', () => {
     it('should match snapshot', () => {
       let wrapper = shallow(
-        <Loading />
+        <Instructions />
       )
       expect(wrapper).toMatchSnapshot()
     })
