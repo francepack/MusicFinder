@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { SearchParams } from '../SearchParams/SearchParams'
 import { storeEvents } from '../../actions'
-import { makeUrlString, createUrlString } from '../../helpers/infoCleaners'
+import { createUrlString } from '../../helpers/infoCleaners'
 import { getEvents } from '../../helpers/apiCalls'
 
 export class BandInfo extends Component {
@@ -114,5 +114,14 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   storeEvents: (events) => dispatch(storeEvents(events))
 })
+
+BandInfo.propTypes = {
+  band: PropTypes.string,
+  similarBands: PropTypes.array,
+  tags: PropTypes.array,
+  storeEvents: PropTypes.func,
+  setError: PropTypes.func,
+  setLoading: PropTypes.func,
+}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BandInfo))

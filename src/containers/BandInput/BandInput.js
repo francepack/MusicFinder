@@ -89,4 +89,12 @@ export const mapDispatchToProps = (dispatch) => ({
   storeBandTags: (tags) => dispatch(storeBandTags(tags))
 })
 
+BandInput.propTypes = {
+  storeBandTags: PropTypes.func,
+  storeSimilarBands: PropTypes.func,
+  storeBand: PropTypes.func,
+  setError: PropTypes.func,
+  setLoading: PropTypes.func
+}
+
 export default withRouter(connect(null, mapDispatchToProps)(BandInput))
