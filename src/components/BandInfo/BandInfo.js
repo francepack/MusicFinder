@@ -112,8 +112,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  storeEvents: (events) => dispatch(storeEvents(events)),
-
+  storeEvents: (events) => dispatch(storeEvents(events))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BandInfo))

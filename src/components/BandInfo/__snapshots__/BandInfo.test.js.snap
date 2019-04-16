@@ -1,0 +1,1089 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandInfo standards should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BandInfo
+    band="ween"
+    similarBands={
+      Array [
+        "beatles",
+        "RHCP",
+        "Yes",
+      ]
+    }
+    storeEvents={[MockFunction]}
+    tags={
+      Array [
+        "weird",
+        "happy sometimes",
+        "sad sometimes",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <SearchParams
+          collectSearchParams={[Function]}
+        />,
+        <h4>
+          Click a search term below
+        </h4>,
+        <p>
+          You searched: 
+          <span
+            onClick={[Function]}
+          >
+            ween
+          </span>
+        </p>,
+        <div
+          className="keywords"
+        >
+          <ul
+            className="bands-list"
+          >
+            <li
+              className="list-head"
+            >
+              Similar Bands
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                beatles
+              </div>
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                RHCP
+              </div>
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                Yes
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="tags-list"
+          >
+            <li
+              className="list-head"
+            >
+              Associated Terms
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                weird
+              </div>
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                happy sometimes
+              </div>
+            </li>
+            <li>
+              <div
+                className="search-term"
+                onClick={[Function]}
+              >
+                sad sometimes
+              </div>
+            </li>
+          </ul>
+        </div>,
+      ],
+      "className": "search-area",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "collectSearchParams": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click a search term below",
+        },
+        "ref": null,
+        "rendered": "Click a search term below",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "You searched: ",
+            <span
+              onClick={[Function]}
+            >
+              ween
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "You searched: ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ween",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "ween",
+            "type": "span",
+          },
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ul
+              className="bands-list"
+            >
+              <li
+                className="list-head"
+              >
+                Similar Bands
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  beatles
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  RHCP
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  Yes
+                </div>
+              </li>
+            </ul>,
+            <ul
+              className="tags-list"
+            >
+              <li
+                className="list-head"
+              >
+                Associated Terms
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  weird
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  happy sometimes
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  sad sometimes
+                </div>
+              </li>
+            </ul>,
+          ],
+          "className": "keywords",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="list-head"
+                >
+                  Similar Bands
+                </li>,
+                Array [
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      beatles
+                    </div>
+                  </li>,
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      RHCP
+                    </div>
+                  </li>,
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      Yes
+                    </div>
+                  </li>,
+                ],
+              ],
+              "className": "bands-list",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Similar Bands",
+                  "className": "list-head",
+                },
+                "ref": null,
+                "rendered": "Similar Bands",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "beatles0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    beatles
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "beatles",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "beatles",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "RHCP1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    RHCP
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "RHCP",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "RHCP",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "Yes2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    Yes
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Yes",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Yes",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="list-head"
+                >
+                  Associated Terms
+                </li>,
+                Array [
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      weird
+                    </div>
+                  </li>,
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      happy sometimes
+                    </div>
+                  </li>,
+                  <li>
+                    <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      sad sometimes
+                    </div>
+                  </li>,
+                ],
+              ],
+              "className": "tags-list",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Associated Terms",
+                  "className": "list-head",
+                },
+                "ref": null,
+                "rendered": "Associated Terms",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "weird0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    weird
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "weird",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "weird",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "happy sometimes1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    happy sometimes
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "happy sometimes",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "happy sometimes",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "sad sometimes2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    sad sometimes
+                  </div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "sad sometimes",
+                    "className": "search-term",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "sad sometimes",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <SearchParams
+            collectSearchParams={[Function]}
+          />,
+          <h4>
+            Click a search term below
+          </h4>,
+          <p>
+            You searched: 
+            <span
+              onClick={[Function]}
+            >
+              ween
+            </span>
+          </p>,
+          <div
+            className="keywords"
+          >
+            <ul
+              className="bands-list"
+            >
+              <li
+                className="list-head"
+              >
+                Similar Bands
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  beatles
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  RHCP
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  Yes
+                </div>
+              </li>
+            </ul>
+            <ul
+              className="tags-list"
+            >
+              <li
+                className="list-head"
+              >
+                Associated Terms
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  weird
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  happy sometimes
+                </div>
+              </li>
+              <li>
+                <div
+                  className="search-term"
+                  onClick={[Function]}
+                >
+                  sad sometimes
+                </div>
+              </li>
+            </ul>
+          </div>,
+        ],
+        "className": "search-area",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "collectSearchParams": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Click a search term below",
+          },
+          "ref": null,
+          "rendered": "Click a search term below",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "You searched: ",
+              <span
+                onClick={[Function]}
+              >
+                ween
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "You searched: ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ween",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "ween",
+              "type": "span",
+            },
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ul
+                className="bands-list"
+              >
+                <li
+                  className="list-head"
+                >
+                  Similar Bands
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    beatles
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    RHCP
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    Yes
+                  </div>
+                </li>
+              </ul>,
+              <ul
+                className="tags-list"
+              >
+                <li
+                  className="list-head"
+                >
+                  Associated Terms
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    weird
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    happy sometimes
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="search-term"
+                    onClick={[Function]}
+                  >
+                    sad sometimes
+                  </div>
+                </li>
+              </ul>,
+            ],
+            "className": "keywords",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="list-head"
+                  >
+                    Similar Bands
+                  </li>,
+                  Array [
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        beatles
+                      </div>
+                    </li>,
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        RHCP
+                      </div>
+                    </li>,
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        Yes
+                      </div>
+                    </li>,
+                  ],
+                ],
+                "className": "bands-list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Similar Bands",
+                    "className": "list-head",
+                  },
+                  "ref": null,
+                  "rendered": "Similar Bands",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "beatles0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      beatles
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "beatles",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "beatles",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "RHCP1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      RHCP
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "RHCP",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "RHCP",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "Yes2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      Yes
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Yes",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Yes",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="list-head"
+                  >
+                    Associated Terms
+                  </li>,
+                  Array [
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        weird
+                      </div>
+                    </li>,
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        happy sometimes
+                      </div>
+                    </li>,
+                    <li>
+                      <div
+                        className="search-term"
+                        onClick={[Function]}
+                      >
+                        sad sometimes
+                      </div>
+                    </li>,
+                  ],
+                ],
+                "className": "tags-list",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Associated Terms",
+                    "className": "list-head",
+                  },
+                  "ref": null,
+                  "rendered": "Associated Terms",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "weird0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      weird
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "weird",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "weird",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "happy sometimes1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      happy sometimes
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "happy sometimes",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "happy sometimes",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "sad sometimes2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="search-term"
+                      onClick={[Function]}
+                    >
+                      sad sometimes
+                    </div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "sad sometimes",
+                      "className": "search-term",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "sad sometimes",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
