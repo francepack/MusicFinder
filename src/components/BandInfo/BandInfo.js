@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { SearchParams } from '../SearchParams/SearchParams'
 import { storeEvents } from '../../actions'
-import { makeUrlString, makeDateUrl, cleanEvents } from '../../helpers/infoCleaners'
+import { makeUrlString, createUrlString } from '../../helpers/infoCleaners'
 import { getEvents } from '../../helpers/apiCalls'
 
 export class BandInfo extends Component {
@@ -22,59 +22,26 @@ export class BandInfo extends Component {
     this.setState({ [param]: value })
   }
 
-  renderKeywords = (keywords) => {
-    if (typeof keywords === 'object' && keywords.length) {
-      return keywords.map((keyword, i) => {
-        return(
-          <li key={keyword + i}> 
-            <div className='search-term' 
-                onClick={() => this.handleClick(keyword)}>
-              {keyword}
-            </div>
-          </li>
-        )
-      })
-    } else {
-      return(
-        <li>No results found</li>
-      )
-    }
-  }
-
   handleClick = (searchItem) => {
     this.searchKeyword(searchItem)
   }
 
   searchKeyword = async (searchItem) => {
+    this.props.setLoading()
     let url = this.createUrl(searchItem)
     try {
       let events = await this.findEvents(url)
       this.saveEvents(events)
       this.showEvents()
+      this.props.setLoading()
     } catch(error) {
       return error.message
     }
   }
 
-  showEvents = () => {
-    const { history } = this.props
-    history.push('/events')
-  }
-
   createUrl = (keyword) => {
     const { state, city, startDate, endDate } = this.state
-    const keywordUrl = makeUrlString(keyword)
-    let urlString = `classificationName=music&keyword=${keywordUrl}`
-    if (state) {
-      const cleanState = makeUrlString(state)
-      const stateUrl = `&stateCode=${cleanState}`
-      urlString = urlString + stateUrl
-    }
-    if (city) {
-      const cleanCity = makeUrlString(city)
-      const cityUrl = `&city=${cleanCity}`
-      urlString = urlString + cityUrl
-    }
+    const urlString = createUrlString(keyword, state, city, startDate, endDate)
     return urlString
   }
 
@@ -87,8 +54,32 @@ export class BandInfo extends Component {
     }
   }
 
+  showEvents = () => {
+    const { history } = this.props
+    history.push('/events')
+  }
+
   saveEvents = (events) => {
     this.props.storeEvents(events)
+  }
+
+  renderKeywords = (keywords) => {
+    if (typeof keywords === 'object' && keywords.length) {
+      return keywords.map((keyword, i) => {
+        return(
+          <li key={keyword + i}> 
+            <div className='search-term' 
+                 onClick={() => this.handleClick(keyword)}>
+              {keyword}
+            </div>
+          </li>
+        )
+      })
+    } else {
+      return(
+        <li>No results found</li>
+      )
+    }
   }
 
   render() {
@@ -121,7 +112,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  storeEvents: (events) => dispatch(storeEvents(events))
+  storeEvents: (events) => dispatch(storeEvents(events)),
+
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BandInfo))

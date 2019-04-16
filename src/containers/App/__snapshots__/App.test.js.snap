@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App app should match snapshot 1`] = `undefined`;
-
-exports[`App app should match snapshot when error is present 1`] = `
+exports[`App app should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <App
+    0="cool"
+    1="rock"
+    2="alternative"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -21,17 +23,473 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Link
-          to="/"
-        >
-          <h1>
+        <h1>
+          <Link
+            to="/"
+          >
             MusicFinder
-          </h1>
-        </Link>,
+          </Link>
+        </h1>,
         <withRouter(Connect(BandInput))
           setError={[Function]}
           setLoading={[Function]}
         />,
+        <div
+          className="instructions"
+        >
+          <p>
+            Type in the name of your favorite band above.
+          </p>
+          <p>
+            Submit to find similar bands and descriptions of that band.
+          </p>
+          <p>
+            Click on any result to search for events that may be of interest.
+          </p>
+        </div>,
+        "",
+        false,
+        <Route
+          exact={true}
+          path="/"
+        />,
+        <Route
+          path="/Loading"
+        />,
+        <Route
+          component={[Function]}
+          path="/band-info"
+        />,
+        <Route
+          component={[Function]}
+          path="/events"
+        />,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            to="/"
+          >
+            MusicFinder
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "MusicFinder",
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "MusicFinder",
+          "type": [Function],
+        },
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "setError": [Function],
+          "setLoading": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Type in the name of your favorite band above.
+            </p>,
+            <p>
+              Submit to find similar bands and descriptions of that band.
+            </p>,
+            <p>
+              Click on any result to search for events that may be of interest.
+            </p>,
+          ],
+          "className": "instructions",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Type in the name of your favorite band above.",
+            },
+            "ref": null,
+            "rendered": "Type in the name of your favorite band above.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit to find similar bands and descriptions of that band.",
+            },
+            "ref": null,
+            "rendered": "Submit to find similar bands and descriptions of that band.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Click on any result to search for events that may be of interest.",
+            },
+            "ref": null,
+            "rendered": "Click on any result to search for events that may be of interest.",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      "",
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "path": "/Loading",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/band-info",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/events",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            <Link
+              to="/"
+            >
+              MusicFinder
+            </Link>
+          </h1>,
+          <withRouter(Connect(BandInput))
+            setError={[Function]}
+            setLoading={[Function]}
+          />,
+          <div
+            className="instructions"
+          >
+            <p>
+              Type in the name of your favorite band above.
+            </p>
+            <p>
+              Submit to find similar bands and descriptions of that band.
+            </p>
+            <p>
+              Click on any result to search for events that may be of interest.
+            </p>
+          </div>,
+          "",
+          false,
+          <Route
+            exact={true}
+            path="/"
+          />,
+          <Route
+            path="/Loading"
+          />,
+          <Route
+            component={[Function]}
+            path="/band-info"
+          />,
+          <Route
+            component={[Function]}
+            path="/events"
+          />,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              to="/"
+            >
+              MusicFinder
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "MusicFinder",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "MusicFinder",
+            "type": [Function],
+          },
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "setError": [Function],
+            "setLoading": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Type in the name of your favorite band above.
+              </p>,
+              <p>
+                Submit to find similar bands and descriptions of that band.
+              </p>,
+              <p>
+                Click on any result to search for events that may be of interest.
+              </p>,
+            ],
+            "className": "instructions",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Type in the name of your favorite band above.",
+              },
+              "ref": null,
+              "rendered": "Type in the name of your favorite band above.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit to find similar bands and descriptions of that band.",
+              },
+              "ref": null,
+              "rendered": "Submit to find similar bands and descriptions of that band.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Click on any result to search for events that may be of interest.",
+              },
+              "ref": null,
+              "rendered": "Click on any result to search for events that may be of interest.",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        "",
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "path": "/Loading",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/band-info",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/events",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`App app should match snapshot when error is present 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    0="cool"
+    1="rock"
+    2="alternative"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          <Link
+            to="/"
+          >
+            MusicFinder
+          </Link>
+        </h1>,
+        <withRouter(Connect(BandInput))
+          setError={[Function]}
+          setLoading={[Function]}
+        />,
+        <div
+          className="instructions"
+        >
+          <p>
+            Type in the name of your favorite band above.
+          </p>
+          <p>
+            Submit to find similar bands and descriptions of that band.
+          </p>
+          <p>
+            Click on any result to search for events that may be of interest.
+          </p>
+        </div>,
         "Fetch call failed",
         false,
         <Route
@@ -57,26 +515,28 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "children": <h1>
+          "children": <Link
+            to="/"
+          >
             MusicFinder
-          </h1>,
-          "to": "/",
+          </Link>,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
             "children": "MusicFinder",
+            "to": "/",
           },
           "ref": null,
           "rendered": "MusicFinder",
-          "type": "h1",
+          "type": [Function],
         },
-        "type": [Function],
+        "type": "h1",
       },
       Object {
         "instance": null,
@@ -89,6 +549,62 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Type in the name of your favorite band above.
+            </p>,
+            <p>
+              Submit to find similar bands and descriptions of that band.
+            </p>,
+            <p>
+              Click on any result to search for events that may be of interest.
+            </p>,
+          ],
+          "className": "instructions",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Type in the name of your favorite band above.",
+            },
+            "ref": null,
+            "rendered": "Type in the name of your favorite band above.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit to find similar bands and descriptions of that band.",
+            },
+            "ref": null,
+            "rendered": "Submit to find similar bands and descriptions of that band.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Click on any result to search for events that may be of interest.",
+            },
+            "ref": null,
+            "rendered": "Click on any result to search for events that may be of interest.",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
       "Fetch call failed",
       false,
@@ -149,17 +665,30 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Link
-            to="/"
-          >
-            <h1>
+          <h1>
+            <Link
+              to="/"
+            >
               MusicFinder
-            </h1>
-          </Link>,
+            </Link>
+          </h1>,
           <withRouter(Connect(BandInput))
             setError={[Function]}
             setLoading={[Function]}
           />,
+          <div
+            className="instructions"
+          >
+            <p>
+              Type in the name of your favorite band above.
+            </p>
+            <p>
+              Submit to find similar bands and descriptions of that band.
+            </p>
+            <p>
+              Click on any result to search for events that may be of interest.
+            </p>
+          </div>,
           "Fetch call failed",
           false,
           <Route
@@ -185,26 +714,28 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "children": <h1>
+            "children": <Link
+              to="/"
+            >
               MusicFinder
-            </h1>,
-            "to": "/",
+            </Link>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "class",
             "props": Object {
               "children": "MusicFinder",
+              "to": "/",
             },
             "ref": null,
             "rendered": "MusicFinder",
-            "type": "h1",
+            "type": [Function],
           },
-          "type": [Function],
+          "type": "h1",
         },
         Object {
           "instance": null,
@@ -217,6 +748,62 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Type in the name of your favorite band above.
+              </p>,
+              <p>
+                Submit to find similar bands and descriptions of that band.
+              </p>,
+              <p>
+                Click on any result to search for events that may be of interest.
+              </p>,
+            ],
+            "className": "instructions",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Type in the name of your favorite band above.",
+              },
+              "ref": null,
+              "rendered": "Type in the name of your favorite band above.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit to find similar bands and descriptions of that band.",
+              },
+              "ref": null,
+              "rendered": "Submit to find similar bands and descriptions of that band.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Click on any result to search for events that may be of interest.",
+              },
+              "ref": null,
+              "rendered": "Click on any result to search for events that may be of interest.",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
         "Fetch call failed",
         false,

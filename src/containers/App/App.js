@@ -6,13 +6,11 @@ import BandInput from '../BandInput/BandInput'
 import BandInfo from '../../components/BandInfo/BandInfo'
 import Events from '../Events/Events'
 import { Route, withRouter, Link } from 'react-router-dom'
-import { storeEvents } from '../../actions'
-
 
 export class App extends Component {
   constructor(props) {
     super(props)
-    this.state= {
+    this.state = {
       error: '',
       loading: false
     }
@@ -25,15 +23,9 @@ export class App extends Component {
   setLoading = () => {
     this.setState({ loading: !this.state.loading })
   }
-
-  // storeEvents = (events) => {
-  //   const { history } = this.props
-  //   this.props.storeEvents(events)
-  //   history.push('/events')
-  // }
   
   render() {
-    const { error, loading } = this.state
+    const { error } = this.state
     return (
       <div className='App'>
         <h1>
@@ -42,32 +34,30 @@ export class App extends Component {
           </Link>
         </h1>
         <BandInput setError={this.setError} setLoading={this.setLoading} />
-        {!this.props.tags.length && 
+        {!this.props.band && 
           <div className='instructions'>
             <p>Type in the name of your favorite band above.</p>
             <p>Submit to find similar bands and descriptions of that band.</p>
-            <p>Click on any results to search for Events that may interest you.</p>
+            <p>Click on any result to search for events that may be of interest.</p>
           </div>
         }
         {error && error}
         {this.state.loading && <Loading />}
         <Route exact path='/' />
         <Route path='/Loading' />
-        <Route path='/band-info' component={() => <BandInfo />}/>
-        <Route path='/events' component={() => <Events events={this.props.events} /> }/>
+        <Route path='/band-info' component={() => <BandInfo setError={this.setError} setLoading={this.setLoading} />}/>
+        <Route path='/events' component={() => <Events /> }/>
       </div>
     )
   }
 }
 
 export const mapStateToProps = (state) => ({
-  tags: state.tags,
-  events: state.events
+  band: state.band
 })
 
 App.propTypes = {
-  similarBands: PropTypes.array,
-  tags: PropTypes.array
+  band: PropTypes.string
 }
 
 export default withRouter(connect(mapStateToProps, null)(App))

@@ -79,7 +79,7 @@ describe('apiCalls', () => {
     
       expect(bandTags).toEqual(expected)
     })
-    it('should return an error message if appropriate', async () => {
+    it('should return an empty array if no results are found', async () => {
       const mockTags = {toptags: {tag: ['cool', 'alt-rock', 'tag3', 'tag4', 'tag5', 'tag6', 'tag7', 'tag8', 'tag9', 'tag10', 'tag11', 'tag12', 'tag13', 'tag14']}}
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
           ok: false,
@@ -88,13 +88,13 @@ describe('apiCalls', () => {
         }
       ))
       const result = await getBandTags(mockTags)
-      expect(result).toEqual("Cannot read property 'tag' of undefined")
+      expect(result).toEqual([])
     })
   })
   describe('getEvents', () => {
     it('should get event info and return events if found', async () => {
       // let cleanEvents = jest.fn(() => event)
-      const mockEvents = {_embedded: {events: [{name: 'OK Go', eventUrl: 'eventpage.com', dates: {start: {localDate: '2019-4-4'}}, _embedded:{attractions: [{image: {url: 'http://image.jpg'}}], venue: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
+      const mockEvents = {_embedded: {events: [{name: 'OK Go', id: 477, url: 'eventpage.com', images: [{url: 'https://s1.ticketm.nethttp://image.jpg' }], dates: {start: {localDate: '2019-4-4'}}, _embedded:{venues: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
         status: 200,
@@ -103,7 +103,7 @@ describe('apiCalls', () => {
       const fetchedEvents = await getEvents(mockEvents)
       expect(window.fetch).toHaveBeenCalled()
     
-      expect(fetchedEvents).toEqual([{"city": "Denver", "date": "2019-4-4", "eventUrl": "eventpage.com", "id": undefined, "image": "https://s1.ticketm.nethttp://image.jpg", "name": "OK Go", "venue": "venue", "venueAddress": "111 A st"}])
+      expect(fetchedEvents).toEqual([{"city": "Denver", "date": "2019-4-4", "eventUrl": "eventpage.com", "id": 477, "image": "https://s1.ticketm.nethttp://image.jpg", "name": "OK Go", "venue": "venue", "venueAddress": "111 A st"}])
     })
     // it('should get event info and return a dummy event if none are found', async () => {
     //   const mockEvents = {Similar: {Results: [{Name: 'OK Go'}, {Name: 'Example Band'}, {Name: 'They might be Giants'}]}}
@@ -119,7 +119,7 @@ describe('apiCalls', () => {
     //   expect(tastediveBands).toEqual(expected)
     // })
     it('should return a dummy event if fetch fails, or no events are found', async () => {
-      const mockEvents = {_embedded: {events: [{name: 'OK Go', eventUrl: 'eventpage.com', dates: {start: {localDate: '2019-4-4'}}, _embedded:{attractions: [{image: {url: 'http://image.jpg'}}], venue: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
+      const mockEvents = {_embedded: {events: [{name: 'OK Go', id: 477, url: 'eventpage.com', images: [{url: 'https://s1.ticketm.nethttp://image.jpg' }], dates: {start: {localDate: '2019-4-4'}}, _embedded:{venues: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
           ok: false,
           status: 422,
@@ -131,10 +131,10 @@ describe('apiCalls', () => {
           eventUrl: '', 
           id: '404', 
           date: '',
-          venue: '',
+          venue: 'NA',
           venueAddress: '',
-          city: '',
-          image: ''}])
+          city: 'NA',
+          image: 'http://euchc.org/wp-content/uploads/2018/03/no-event-scheduled.png'}])
     })
   })
 })

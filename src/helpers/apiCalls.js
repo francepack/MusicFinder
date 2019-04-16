@@ -65,7 +65,7 @@ export const getBandTags = async (band) => {
 }
 
 export const getEvents = async (urlString) => {
-  const url = `https://app.ticketmaster.com/discovery/v1/events.json?${urlString}&apikey=${ticketmasterKey}`
+  const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketmasterKey}${urlString}`
   try {
     const response = await fetch(url)
     const eventData = await response.json()

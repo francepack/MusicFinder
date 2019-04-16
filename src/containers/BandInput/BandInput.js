@@ -13,8 +13,40 @@ export class BandInput extends Component {
     }
   }
 
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.findResults()
+  }
+
+  findResults = () => {
+    const { bandInput } = this.state
+    this.props.setLoading()
+    this.saveBand(bandInput)
+    this.getSearchIdeas(bandInput)
+  }
+
   saveBand = (band) => {
     this.props.storeBand(band)
+  }
+
+  getSearchIdeas = async (band) => {
+    try {
+      const { history } = this.props
+      let similarBands = await this.searchSimilarBands(band)
+      let bandTags = await this.searchForBandTags(band)
+      this.props.storeSimilarBands(similarBands)
+      this.props.storeBandTags(bandTags)
+      history.push('/band-info')
+      this.props.setLoading()
+    } catch(error) {
+      return error.message
+    }
   }
 
   searchSimilarBands = async (band) => {
@@ -33,34 +65,6 @@ export class BandInput extends Component {
     } catch(error) {
       return error.message
     }
-  }
-
-  getIdeas = async (band) => {
-    try {
-      const { history } = this.props
-      let similarBands = await this.searchSimilarBands(band)
-      let bandTags = await this.searchForBandTags(band)
-      this.props.storeSimilarBands(similarBands)
-      this.props.storeBandTags(bandTags)
-      await history.push('/band-info')
-      this.props.setLoading()
-    } catch(error) {
-      return error.message
-    }
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault()
-    this.props.setLoading()
-    const { bandInput } = this.state
-    this.saveBand(bandInput)
-    this.getIdeas(bandInput)
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
   }
 
   render() {

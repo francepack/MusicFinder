@@ -1,0 +1,1753 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Events Snapshots should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Events
+    events={
+      Array [
+        Object {
+          "_embedded": Object {
+            "venues": Array [
+              Object {
+                "address": Object {
+                  "line1": "111 A st",
+                },
+                "city": Object {
+                  "name": "Denver",
+                },
+                "name": "venue",
+              },
+            ],
+          },
+          "dates": Object {
+            "start": Object {
+              "localDate": "2019-4-4",
+            },
+          },
+          "id": 477,
+          "images": Array [
+            Object {
+              "url": "https://s1.ticketm.nethttp://image.jpg",
+            },
+          ],
+          "name": "OK Go",
+          "url": "eventpage.com",
+        },
+        Object {
+          "_embedded": Object {
+            "venues": Array [
+              Object {
+                "address": Object {
+                  "line1": "222 B st",
+                },
+                "city": Object {
+                  "name": "Denver",
+                },
+                "name": "venue2",
+              },
+            ],
+          },
+          "dates": Object {
+            "start": Object {
+              "localDate": "2019-5-5",
+            },
+          },
+          "id": 111,
+          "images": Array [
+            Object {
+              "url": "https://s1.ticketm.nethttp://image.jpg",
+            },
+          ],
+          "name": "Ween",
+          "url": "eventpage2.com",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="events-container"
+        >
+          <div
+            className="event-card"
+          >
+            <a
+              target="_blank"
+            >
+              <div
+                className="background"
+                style={
+                  Object {
+                    "backgroundImage": "url(undefined)",
+                  }
+                }
+              >
+                <div
+                  className="overlay"
+                >
+                  <div
+                    className="card-details"
+                  >
+                    <div
+                      className="top-details"
+                    >
+                      <h3>
+                        OK Go
+                      </h3>
+                      <p />
+                    </div>
+                    <div
+                      className="bottom-details"
+                    >
+                      <p>
+                        City: 
+                      </p>
+                      <p>
+                        Venue: 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="event-card"
+          >
+            <a
+              target="_blank"
+            >
+              <div
+                className="background"
+                style={
+                  Object {
+                    "backgroundImage": "url(undefined)",
+                  }
+                }
+              >
+                <div
+                  className="overlay"
+                >
+                  <div
+                    className="card-details"
+                  >
+                    <div
+                      className="top-details"
+                    >
+                      <h3>
+                        Ween
+                      </h3>
+                      <p />
+                    </div>
+                    <div
+                      className="bottom-details"
+                    >
+                      <p>
+                        City: 
+                      </p>
+                      <p>
+                        Venue: 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>,
+        <Link
+          to="./"
+        >
+          <button
+            className="return-btn"
+          >
+            Return
+          </button>
+        </Link>,
+      ],
+      "className": "events-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="event-card"
+            >
+              <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>,
+            <div
+              className="event-card"
+            >
+              <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>,
+          ],
+          "className": "events-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "477",
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>,
+              "className": "event-card",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>,
+                "href": undefined,
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>,
+                  "className": "background",
+                  "style": Object {
+                    "backgroundImage": "url(undefined)",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>,
+                    "className": "overlay",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>,
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>,
+                      ],
+                      "className": "card-details",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <h3>
+                              OK Go
+                            </h3>,
+                            <p />,
+                          ],
+                          "className": "top-details",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "OK Go",
+                            },
+                            "ref": null,
+                            "rendered": "OK Go",
+                            "type": "h3",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": undefined,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p>
+                              City: 
+                            </p>,
+                            <p>
+                              Venue: 
+                            </p>,
+                          ],
+                          "className": "bottom-details",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "City: ",
+                                undefined,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "City: ",
+                              undefined,
+                            ],
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "Venue: ",
+                                undefined,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "Venue: ",
+                              undefined,
+                            ],
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "a",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "111",
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>,
+              "className": "event-card",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>,
+                "href": undefined,
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>,
+                  "className": "background",
+                  "style": Object {
+                    "backgroundImage": "url(undefined)",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>,
+                    "className": "overlay",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>,
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>,
+                      ],
+                      "className": "card-details",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <h3>
+                              Ween
+                            </h3>,
+                            <p />,
+                          ],
+                          "className": "top-details",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Ween",
+                            },
+                            "ref": null,
+                            "rendered": "Ween",
+                            "type": "h3",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": undefined,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p>
+                              City: 
+                            </p>,
+                            <p>
+                              Venue: 
+                            </p>,
+                          ],
+                          "className": "bottom-details",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "City: ",
+                                undefined,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "City: ",
+                              undefined,
+                            ],
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "Venue: ",
+                                undefined,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "Venue: ",
+                              undefined,
+                            ],
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "a",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <button
+            className="return-btn"
+          >
+            Return
+          </button>,
+          "to": "./",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Return",
+            "className": "return-btn",
+          },
+          "ref": null,
+          "rendered": "Return",
+          "type": "button",
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="events-container"
+          >
+            <div
+              className="event-card"
+            >
+              <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          OK Go
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              className="event-card"
+            >
+              <a
+                target="_blank"
+              >
+                <div
+                  className="background"
+                  style={
+                    Object {
+                      "backgroundImage": "url(undefined)",
+                    }
+                  }
+                >
+                  <div
+                    className="overlay"
+                  >
+                    <div
+                      className="card-details"
+                    >
+                      <div
+                        className="top-details"
+                      >
+                        <h3>
+                          Ween
+                        </h3>
+                        <p />
+                      </div>
+                      <div
+                        className="bottom-details"
+                      >
+                        <p>
+                          City: 
+                        </p>
+                        <p>
+                          Venue: 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>,
+          <Link
+            to="./"
+          >
+            <button
+              className="return-btn"
+            >
+              Return
+            </button>
+          </Link>,
+        ],
+        "className": "events-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="event-card"
+              >
+                <a
+                  target="_blank"
+                >
+                  <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>,
+              <div
+                className="event-card"
+              >
+                <a
+                  target="_blank"
+                >
+                  <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>,
+            ],
+            "className": "events-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "477",
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  target="_blank"
+                >
+                  <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>,
+                "className": "event-card",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "href": undefined,
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>,
+                    "className": "background",
+                    "style": Object {
+                      "backgroundImage": "url(undefined)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            OK Go
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>,
+                      "className": "overlay",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div
+                            className="top-details"
+                          >
+                            <h3>
+                              OK Go
+                            </h3>
+                            <p />
+                          </div>,
+                          <div
+                            className="bottom-details"
+                          >
+                            <p>
+                              City: 
+                            </p>
+                            <p>
+                              Venue: 
+                            </p>
+                          </div>,
+                        ],
+                        "className": "card-details",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <h3>
+                                OK Go
+                              </h3>,
+                              <p />,
+                            ],
+                            "className": "top-details",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "OK Go",
+                              },
+                              "ref": null,
+                              "rendered": "OK Go",
+                              "type": "h3",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <p>
+                                City: 
+                              </p>,
+                              <p>
+                                Venue: 
+                              </p>,
+                            ],
+                            "className": "bottom-details",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  "City: ",
+                                  undefined,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                "City: ",
+                                undefined,
+                              ],
+                              "type": "p",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  "Venue: ",
+                                  undefined,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                "Venue: ",
+                                undefined,
+                              ],
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                "type": "a",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "111",
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  target="_blank"
+                >
+                  <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>,
+                "className": "event-card",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="background"
+                    style={
+                      Object {
+                        "backgroundImage": "url(undefined)",
+                      }
+                    }
+                  >
+                    <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>,
+                  "href": undefined,
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="overlay"
+                    >
+                      <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>
+                    </div>,
+                    "className": "background",
+                    "style": Object {
+                      "backgroundImage": "url(undefined)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="card-details"
+                      >
+                        <div
+                          className="top-details"
+                        >
+                          <h3>
+                            Ween
+                          </h3>
+                          <p />
+                        </div>
+                        <div
+                          className="bottom-details"
+                        >
+                          <p>
+                            City: 
+                          </p>
+                          <p>
+                            Venue: 
+                          </p>
+                        </div>
+                      </div>,
+                      "className": "overlay",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div
+                            className="top-details"
+                          >
+                            <h3>
+                              Ween
+                            </h3>
+                            <p />
+                          </div>,
+                          <div
+                            className="bottom-details"
+                          >
+                            <p>
+                              City: 
+                            </p>
+                            <p>
+                              Venue: 
+                            </p>
+                          </div>,
+                        ],
+                        "className": "card-details",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <h3>
+                                Ween
+                              </h3>,
+                              <p />,
+                            ],
+                            "className": "top-details",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Ween",
+                              },
+                              "ref": null,
+                              "rendered": "Ween",
+                              "type": "h3",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": undefined,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <p>
+                                City: 
+                              </p>,
+                              <p>
+                                Venue: 
+                              </p>,
+                            ],
+                            "className": "bottom-details",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  "City: ",
+                                  undefined,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                "City: ",
+                                undefined,
+                              ],
+                              "type": "p",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": Array [
+                                  "Venue: ",
+                                  undefined,
+                                ],
+                              },
+                              "ref": null,
+                              "rendered": Array [
+                                "Venue: ",
+                                undefined,
+                              ],
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                "type": "a",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <button
+              className="return-btn"
+            >
+              Return
+            </button>,
+            "to": "./",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Return",
+              "className": "return-btn",
+            },
+            "ref": null,
+            "rendered": "Return",
+            "type": "button",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
