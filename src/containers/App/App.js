@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Loading from '../../components/Loading/Loading'
 import BandInput from '../BandInput/BandInput'
-import BandInfo from '../../components/BandInfo/BandInfo'
+import BandInfo from '../BandInfo/BandInfo'
 import Events from '../Events/Events'
 import { Route, withRouter, Link } from 'react-router-dom'
 

@@ -49,4 +49,8 @@ export class SearchParams extends Component {
       </div>
     )
   }
+
+  SearchParams.propTypes = {
+    collectSearchParams: PropTypes.func
+  }  
 }
