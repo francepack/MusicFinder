@@ -1,16 +1,47 @@
 import { getSimilarBands, lastfmGetSimilarBands, tastediveGetSimilarBands, getBandTags, getEvents } from './apiCalls'
-import { cleanEvent } from './infoCleaners'
+import { cleanEvent, makeStringUrl, buildBandArray } from './infoCleaners'
 
 describe('apiCalls', () => {
   describe('getSimilarBands', () => {
+    it.skip('should call helper function to make user input into a urlstring', async () => {
+      const mockInput = 'Blink-182'
+      let makeStringUrl = jest.fn()
+      getSimilarBands(mockInput)
+      expect(makeStringUrl).toBeCalled()
+    })
     it('should call functions to get 2 sets of similarBands', async () => {
       
     })
-    it('should call a function to find matches', () => {
-
+    it.skip('should call a function to find matches if either fetch came up with results', async () => {
+      const mockInput = 'Blink-182'
+      // let makeStringUrl = jest.fn()
+      // let tastediveBands = jest.fn(() => ['results'])
+      // let lastfmBands = jest.fn(() => '')
+      let matchSimilarBands = jest.fn()
+      await getSimilarBands(mockInput)
+      expect(matchSimilarBands).toBeCalled()
     })
-    it('should call a function to build an array of 10 bands', () => {
-      
+    it('should call a function to build an array of 10 bands', async () => {
+      const mockInput = 'Blink-182'
+      await getSimilarBands(mockInput)
+      let buildBandArray = jest.fn()
+      expect(buildBandArray).toBeCalled
+    })
+    it('should produce an array of 10 items', async () => {
+      const mockInput = 'Blink-182'
+      const result = await getSimilarBands(mockInput)
+      expect(result).toHaveLength(10)
+    })
+    it.skip('should return an empty array if both fetches fail', async () => {
+      const mockInput = 'Blink-182'
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        ok: false,
+        status: 422,
+        json: () => Promise.resolve(undefined)
+      }
+      ))
+      const result = await getSimilarBands(mockInput)
+      expect(result).toEqual([])
     })
   })
   describe('lastfmGetSimilarBands', () => {
@@ -93,7 +124,6 @@ describe('apiCalls', () => {
   })
   describe('getEvents', () => {
     it('should get event info and return events if found', async () => {
-      // let cleanEvents = jest.fn(() => event)
       const mockEvents = {_embedded: {events: [{name: 'OK Go', id: 477, url: 'eventpage.com', images: [{url: 'https://s1.ticketm.nethttp://image.jpg' }], dates: {start: {localDate: '2019-4-4'}}, _embedded:{venues: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         ok: true,
@@ -103,21 +133,8 @@ describe('apiCalls', () => {
       const fetchedEvents = await getEvents(mockEvents)
       expect(window.fetch).toHaveBeenCalled()
     
-      expect(fetchedEvents).toEqual([{"city": "Denver", "date": "2019-4-4", "eventUrl": "eventpage.com", "id": 477, "image": "https://s1.ticketm.nethttp://image.jpg", "name": "OK Go", "venue": "venue", "venueAddress": "111 A st"}])
+      expect(fetchedEvents).toEqual([{city: 'Denver', date: '4/4/2019', eventUrl: 'eventpage.com', id: 477, image: 'https://s1.ticketm.nethttp://image.jpg', name: 'OK Go', venue: 'venue', venueAddress: '111 A st'}])
     })
-    // it('should get event info and return a dummy event if none are found', async () => {
-    //   const mockEvents = {Similar: {Results: [{Name: 'OK Go'}, {Name: 'Example Band'}, {Name: 'They might be Giants'}]}}
-    //   const expected = ['OK Go', 'Example Band', 'They might be Giants']
-    //   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    //     ok: true,
-    //     status: 200,
-    //     json: () => Promise.resolve(mockBands)
-    //   }))
-    //   const tastediveBands = await tastediveGetSimilarBands(mockBands)
-    //   expect(window.fetch).toHaveBeenCalled()
-    
-    //   expect(tastediveBands).toEqual(expected)
-    // })
     it('should return a dummy event if fetch fails, or no events are found', async () => {
       const mockEvents = {_embedded: {events: [{name: 'OK Go', id: 477, url: 'eventpage.com', images: [{url: 'https://s1.ticketm.nethttp://image.jpg' }], dates: {start: {localDate: '2019-4-4'}}, _embedded:{venues: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({

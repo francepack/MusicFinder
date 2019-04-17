@@ -8,11 +8,11 @@
   color: $almond;
   &:focus {
     outline: none;
-    
   }
-
   &:hover {
+    background-color: $activeBtn;
     cursor: pointer;
+    transform: scale(1.04)
   }
 }
 
@@ -20,12 +20,13 @@
 @mixin inputs {
   background-color: $teal;
   border: 0;
-  color: $wood;
+  color: $inputText;
+  font-style: italic;
   height: 35px;
   text-indent: 6px;
   &:focus {
     background-color: $teal;
-    color: $greenBlue;
+    color: $inputText;
     outline: none;
   }
 }

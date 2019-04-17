@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { SearchParams } from './SearchParams'
-import BandInfo from '../BandInfo/BandInfo'
+import BandInfo from '../../containers/BandInfo/BandInfo'
 
 describe('SearchParams', () => {
   let wrapper

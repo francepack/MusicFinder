@@ -34,20 +34,8 @@ ShallowWrapper {
           setError={[Function]}
           setLoading={[Function]}
         />,
-        <div
-          className="instructions"
-        >
-          <p>
-            Type in the name of your favorite band above.
-          </p>
-          <p>
-            Submit to find similar bands and descriptions of that band.
-          </p>
-          <p>
-            Click on any result to search for events that may be of interest.
-          </p>
-        </div>,
         "",
+        <Instructions />,
         false,
         <Route
           exact={true}
@@ -107,63 +95,16 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      "",
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              Type in the name of your favorite band above.
-            </p>,
-            <p>
-              Submit to find similar bands and descriptions of that band.
-            </p>,
-            <p>
-              Click on any result to search for events that may be of interest.
-            </p>,
-          ],
-          "className": "instructions",
-        },
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Type in the name of your favorite band above.",
-            },
-            "ref": null,
-            "rendered": "Type in the name of your favorite band above.",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Submit to find similar bands and descriptions of that band.",
-            },
-            "ref": null,
-            "rendered": "Submit to find similar bands and descriptions of that band.",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Click on any result to search for events that may be of interest.",
-            },
-            "ref": null,
-            "rendered": "Click on any result to search for events that may be of interest.",
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
-      "",
       false,
       Object {
         "instance": null,
@@ -233,20 +174,8 @@ ShallowWrapper {
             setError={[Function]}
             setLoading={[Function]}
           />,
-          <div
-            className="instructions"
-          >
-            <p>
-              Type in the name of your favorite band above.
-            </p>
-            <p>
-              Submit to find similar bands and descriptions of that band.
-            </p>
-            <p>
-              Click on any result to search for events that may be of interest.
-            </p>
-          </div>,
           "",
+          <Instructions />,
           false,
           <Route
             exact={true}
@@ -306,63 +235,16 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        "",
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                Type in the name of your favorite band above.
-              </p>,
-              <p>
-                Submit to find similar bands and descriptions of that band.
-              </p>,
-              <p>
-                Click on any result to search for events that may be of interest.
-              </p>,
-            ],
-            "className": "instructions",
-          },
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Type in the name of your favorite band above.",
-              },
-              "ref": null,
-              "rendered": "Type in the name of your favorite band above.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Submit to find similar bands and descriptions of that band.",
-              },
-              "ref": null,
-              "rendered": "Submit to find similar bands and descriptions of that band.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Click on any result to search for events that may be of interest.",
-              },
-              "ref": null,
-              "rendered": "Click on any result to search for events that may be of interest.",
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
-        "",
         false,
         Object {
           "instance": null,
@@ -477,20 +359,8 @@ ShallowWrapper {
           setError={[Function]}
           setLoading={[Function]}
         />,
-        <div
-          className="instructions"
-        >
-          <p>
-            Type in the name of your favorite band above.
-          </p>
-          <p>
-            Submit to find similar bands and descriptions of that band.
-          </p>
-          <p>
-            Click on any result to search for events that may be of interest.
-          </p>
-        </div>,
         "Fetch call failed",
+        <Instructions />,
         false,
         <Route
           exact={true}
@@ -550,63 +420,16 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      "Fetch call failed",
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              Type in the name of your favorite band above.
-            </p>,
-            <p>
-              Submit to find similar bands and descriptions of that band.
-            </p>,
-            <p>
-              Click on any result to search for events that may be of interest.
-            </p>,
-          ],
-          "className": "instructions",
-        },
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Type in the name of your favorite band above.",
-            },
-            "ref": null,
-            "rendered": "Type in the name of your favorite band above.",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Submit to find similar bands and descriptions of that band.",
-            },
-            "ref": null,
-            "rendered": "Submit to find similar bands and descriptions of that band.",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Click on any result to search for events that may be of interest.",
-            },
-            "ref": null,
-            "rendered": "Click on any result to search for events that may be of interest.",
-            "type": "p",
-          },
-        ],
-        "type": "div",
+        "rendered": null,
+        "type": [Function],
       },
-      "Fetch call failed",
       false,
       Object {
         "instance": null,
@@ -676,20 +499,8 @@ ShallowWrapper {
             setError={[Function]}
             setLoading={[Function]}
           />,
-          <div
-            className="instructions"
-          >
-            <p>
-              Type in the name of your favorite band above.
-            </p>
-            <p>
-              Submit to find similar bands and descriptions of that band.
-            </p>
-            <p>
-              Click on any result to search for events that may be of interest.
-            </p>
-          </div>,
           "Fetch call failed",
+          <Instructions />,
           false,
           <Route
             exact={true}
@@ -749,63 +560,16 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        "Fetch call failed",
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                Type in the name of your favorite band above.
-              </p>,
-              <p>
-                Submit to find similar bands and descriptions of that band.
-              </p>,
-              <p>
-                Click on any result to search for events that may be of interest.
-              </p>,
-            ],
-            "className": "instructions",
-          },
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Type in the name of your favorite band above.",
-              },
-              "ref": null,
-              "rendered": "Type in the name of your favorite band above.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Submit to find similar bands and descriptions of that band.",
-              },
-              "ref": null,
-              "rendered": "Submit to find similar bands and descriptions of that band.",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Click on any result to search for events that may be of interest.",
-              },
-              "ref": null,
-              "rendered": "Click on any result to search for events that may be of interest.",
-              "type": "p",
-            },
-          ],
-          "type": "div",
+          "rendered": null,
+          "type": [Function],
         },
-        "Fetch call failed",
         false,
         Object {
           "instance": null,

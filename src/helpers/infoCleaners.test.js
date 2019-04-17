@@ -8,8 +8,8 @@ describe('infoCleaners', () => {
       const mockString2 = "'Hey You'"
       const expected1 = '%21%22%23%24%25%26%28%29%2A%2B%2F'
       const expected2 = "%27Hey+You%27"
-      const result1 = helpers.makeUrlString(mockString1)
-      const result2 = helpers.makeUrlString(mockString2)
+      const result1 = helpers.makeStringUrl(mockString1)
+      const result2 = helpers.makeStringUrl(mockString2)
       expect(result1).toEqual(expected1)
       expect(result2).toEqual(expected2)
     })
@@ -118,14 +118,14 @@ describe('infoCleaners', () => {
         }
       }
       const expected = {
-        city: "Denver",
-        date: "2019-4-4",
-        eventUrl: "eventpage.com",
+        city: 'Denver',
+        date: '4/4/2019',
+        eventUrl: 'eventpage.com',
         id: 477,
-        image: "https://s1.ticketm.nethttp://image.jpg",
-        name: "OK Go",
-        venue: "venue",           
-        venueAddress: "111 A st",
+        image: 'https://s1.ticketm.nethttp://image.jpg',
+        name: 'OK Go',
+        venue: 'venue',           
+        venueAddress: '111 A st',
       }
       const result = helpers.cleanEvents(mockEvent)
       expect(result).toEqual(expected)
@@ -142,14 +142,14 @@ describe('infoCleaners', () => {
         _embedded:{notvenuekey: 'no venue in here'}
       }
       const expected = {
-        city: "No city listed",
-        date: "2019-4-4",
-        eventUrl: "eventpage.com",
+        city: 'No city listed',
+        date: '4/4/2019',
+        eventUrl: 'eventpage.com',
         id: 477,
-        image: "https://image.freepik.com/free-vector/blue-background-people-concert_23-2147604883.jpg",
-        name: "OK Go",
-        venue: "No venue listed",           
-        venueAddress: "No address given",
+        image: 'https://image.freepik.com/free-vector/blue-background-people-concert_23-2147604883.jpg',
+        name: 'OK Go',
+        venue: 'No venue listed',           
+        venueAddress: 'No address given',
       }
       const result = helpers.cleanEvents(mockEvent)
       expect(result).toEqual(expected)
@@ -172,26 +172,26 @@ describe('infoCleaners', () => {
     ]
     const mockBackground = { backgroundImage: `url(${mockEvents[0].image})`}
 
-      const expected = (<div className='single'>
-      <div className='single-event-card' key={mockEvents[0].id}>
-        <a href={mockEvents[0].eventUrl} target='_blank'>
+      const expected = (<main className='single'>
+      <section className='single-event-card' key={mockEvents[0].id}>
+        <a href={mockEvents[0].eventUrl} target='_blank' rel='noopener noreferrer'>
           <div className='background' style={mockBackground}>
             <div className='overlay'>
-              <div className='card-details'>
-                <div className='top-details'>
+              <article className='card-details'>
+                <header className='top-details'>
                   <h3>{mockEvents[0].name}</h3>
                   <p>{mockEvents[0].date}</p>
-                </div>
-                <div className='bottom-details'>
+                </header>
+                <footer className='bottom-details'>
                   <p>City: {mockEvents[0].city}</p>
                   <p>Venue: {mockEvents[0].venue}</p>
-                </div>
-              </div>
+                </footer>
+              </article>
             </div>
           </div>
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
     )
     const result = helpers.buildCards(mockEvents)
     expect(result).toEqual(expected)
@@ -224,46 +224,46 @@ describe('infoCleaners', () => {
       const mockBackground2 = { backgroundImage: `url(${mockEvents[1].image})`}
       
       const expected = (
-      <div className='events-container'>
-        <div className='event-card' key={mockEvents[0].id}>
-          <a href={mockEvents[0].eventUrl} target='_blank'>
+      <main className='events-container'>
+        <section className='event-card' key={mockEvents[0].id}>
+          <a href={mockEvents[0].eventUrl} target='_blank' rel="noopener noreferrer">
             <div className='background' style={mockBackground1}>
               <div className='overlay'>
-                <div className='card-details'>
-                  <div className='top-details'>
+                <article className='card-details'>
+                  <header className='top-details'>
                     <h3>{mockEvents[0].name}</h3>
                     <p>{mockEvents[0].date}</p>
-                  </div>
-                  <div className='bottom-details'>
+                  </header>
+                  <footer className='bottom-details'>
                     <p>City: {mockEvents[0].city}</p>
                     <p>Venue: {mockEvents[0].venue}</p>
-                  </div>
-                </div>
+                  </footer>
+                </article>
               </div>
             </div>
           </a>
-        </div>
+        </section>
         
      
-        <div className='event-card' key={mockEvents[1].id}>
-          <a href={mockEvents[1].eventUrl} target='_blank'>
+        <section className='event-card' key={mockEvents[1].id}>
+          <a href={mockEvents[1].eventUrl} target='_blank' rel="noopener noreferrer">
             <div className='background' style={mockBackground2}>
               <div className='overlay'>
-                <div className='card-details'>
-                  <div className='top-details'>
+                <article className='card-details'>
+                  <header className='top-details'>
                     <h3>{mockEvents[1].name}</h3>
                     <p>{mockEvents[1].date}</p>
-                  </div>
-                  <div className='bottom-details'>
+                  </header>
+                  <footer className='bottom-details'>
                     <p>City: {mockEvents[1].city}</p>
                     <p>Venue: {mockEvents[1].venue}</p>
-                  </div>
-                </div>
+                  </footer>
+                </article>
               </div>
             </div>
           </a>
-        </div>
-      </div>)
+        </section>
+      </main>)
 
     const result = helpers.buildCards(mockEvents)
     expect(result).toEqual(expected)
@@ -275,8 +275,45 @@ describe('infoCleaners', () => {
     })
   })
   describe('createUrlString', () => {
-    it('should', () => {
-      
+    it('should format user input to be readable by the api', () => {
+      const mockKeyword = 'Beatles'
+      const mockState = 'CO'
+      const mockCity = 'Denver'
+      const mockStart = '11/29/2020'
+      const mockEnd = '11/29/2021'
+      const result = helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
+      const expected = '&classificationName=music&keyword=Beatles&stateCode=CO&city=Denver&startDateTime=2020-11-29T01:00:00Z&endDateTime=2021-11-29T01:00:00Z'
+      expect(result).toEqual(expected)
+    })
+    it.skip('should call makeDateUrl if a date is present', () => {
+      const mockKeyword = 'Beatles'
+      const mockState = 'CO'
+      const mockCity = 'Denver'
+      const mockStart = '11/29/2020'
+      const mockEnd = '11/29/2021'
+      helpers.makeDateUrl = jest.fn()
+      helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
+      expect(helpers.makeDateUrl).toBeCalled()
+    })
+    it('should not call makeDateUrl if a date is absent', () => {
+      const mockKeyword = 'Beatles'
+      const mockState = 'CO'
+      const mockCity = 'Denver'
+      const mockStart = ''
+      const mockEnd = ''
+      helpers.makeDateUrl = jest.fn()
+      helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
+      expect(helpers.makeDateUrl).not.toHaveBeenCalled()
+    })
+    it.skip('should always call makeStringUrl with keyword', () => {
+      const mockKeyword = 'beatles'
+      const mockState = ''
+      const mockCity = ''
+      const mockStart = ''
+      const mockEnd = ''
+      helpers.makeStringUrl = jest.fn()
+      helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
+      expect(helpers.makeStringUrl).toBeCalled()
     })
   })
 })

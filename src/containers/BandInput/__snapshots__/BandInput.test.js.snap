@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <BandInput
     setLoading={[MockFunction]}
     storeBand={[MockFunction]}
+    storeBandTags={[MockFunction]}
+    storeSimilarBands={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

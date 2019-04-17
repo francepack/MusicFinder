@@ -13,6 +13,7 @@ export class SearchParams extends Component {
     return(
       <div className='params'>
         <h3>Search for events based on similar bands or terms</h3>
+        <h5>Fill in optional parameters below, or leave blank to broaden your search</h5>
         <div className='param-inputs'>
           <div className='location-inputs'>
             <label>State Code: <br />

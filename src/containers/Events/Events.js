@@ -16,7 +16,7 @@ export class Events extends Component {
     return(
       <div className='events-section'>
         {renderEvents}
-        <Link to='./band-info'><button className='return-btn'>Return to results</button></Link>
+        <Link to='./band-info'><button className='return-btn'>Return to Results</button></Link>
       </div>
     )
   }

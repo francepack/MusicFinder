@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { BandInput, mapDispatchToProps } from './BandInput'
 import * as actions from '../../actions'
+import { getSimilarBands, getBandTags } from '../../helpers/apiCalls';
 
 jest.mock('../../helpers/apiCalls')
 
@@ -13,7 +14,9 @@ describe('BandInput', () => {
   beforeEach(() => {
     props = {
       setLoading: jest.fn(),
-      storeBand: jest.fn()
+      storeBand: jest.fn(),
+      storeSimilarBands: jest.fn(),
+      storeBandTags: jest.fn()
     }
     wrapper = shallow(
       <BandInput {...props} />
@@ -39,7 +42,9 @@ describe('BandInput', () => {
   })
   describe('searchSimilarBands', () => {
     it('should call getSimilarBands with a bandname', () => {
-      
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands(mockBand)
+      expect(getSimilarBands).toHaveBeenCalledWith(mockBand)
     })
     it('should return an error message if failed', () => {
       
@@ -47,7 +52,9 @@ describe('BandInput', () => {
   })
   describe('searchForBandTags', () => {
     it('should call getBandTags with a bandname', () => {
-      
+      const mockBand = 'Ween'
+      wrapper.instance().searchForBandTags(mockBand)
+      expect(getBandTags).toHaveBeenCalledWith(mockBand)
     })
     it('should return an error message if failed', () => {
       
@@ -55,19 +62,38 @@ describe('BandInput', () => {
   })
   describe('getSearchIdeas', () => {
     it('should call searchSimilarBands', () => {
-      
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands = jest.fn()
+      wrapper.instance().getSearchIdeas(mockBand)
+      expect(wrapper.instance().searchSimilarBands).toBeCalled()
     })
-    it('should call searchForBandTags', () => {
-      
+    it('should call searchForBandTags', async () => {
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands = jest.fn()
+      wrapper.instance().searchForBandTags = jest.fn()
+      await wrapper.instance().getSearchIdeas(mockBand)
+      expect(wrapper.instance().searchForBandTags).toBeCalled()
     })
-    it('should call props storeSimilarBands', () => {
-      
+    it('should call props storeSimilarBands', async () => {
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands = jest.fn()
+      wrapper.instance().searchForBandTags = jest.fn()
+      await wrapper.instance().getSearchIdeas(mockBand)
+      expect(wrapper.instance().props.storeSimilarBands).toBeCalled()
     })
-    it('should call props storeBandTags', () => {
-      
+    it('should call props storeBandTags', async () => {
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands = jest.fn()
+      wrapper.instance().searchForBandTags = jest.fn()
+      await wrapper.instance().getSearchIdeas(mockBand)
+      expect(wrapper.instance().props.storeBandTags).toBeCalled()
     })
-    it('should call props setLoading', () => {
-      
+    it('should call props setLoading', async () => {
+      const mockBand = 'Ween'
+      wrapper.instance().searchSimilarBands = jest.fn()
+      wrapper.instance().searchForBandTags = jest.fn()
+      await wrapper.instance().getSearchIdeas(mockBand)
+      expect(wrapper.instance().props.setLoading).toBeCalled()
     })
     it('should return an error message if failed', () => {
       

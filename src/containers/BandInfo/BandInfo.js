@@ -88,7 +88,7 @@ export class BandInfo extends Component {
     return(
       <div className='search-area'>
         <SearchParams collectSearchParams={this.collectSearchParams} />
-        <h4>Click a search term below</h4>
+        <h4>Click a term below to search</h4>
         <p>You searched: <span onClick={() => this.handleClick(this.props.band)}>{this.props.band}</span></p>
         <div className='keywords'>
           <ul className='bands-list'>

@@ -1,8 +1,8 @@
 import { lastfmKey, ticketmasterKey, tastediveKey } from '../apiKey/key'
-import { makeUrlString, buildBandArray, cleanEvents, matchSimilarBands } from './infoCleaners'
+import { makeStringUrl, buildBandArray, cleanEvents, matchSimilarBands } from './infoCleaners'
 
 export const getSimilarBands = async (band) => {
-  let bandUrl = makeUrlString(band)
+  let bandUrl = makeStringUrl(band)
   try {
     let tastediveBands = await tastediveGetSimilarBands(bandUrl)
     let lastfmBands = await lastfmGetSimilarBands(bandUrl)

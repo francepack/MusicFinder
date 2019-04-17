@@ -198,16 +198,18 @@ describe('BandInfo', () => {
       
     })
   })
-  // describe('showEvents', () => {
-  //   it('should take a user to events page', () => {
-      
-  //   })
-  // })
   describe('saveEvents', () => {
     it('should call prop storeEvents', () => {
       const mockEvents = [{name: 'event1'}, {name: 'event2'}]
       wrapper.instance().saveEvents(mockEvents)
       expect(wrapper.instance().props.storeEvents).toHaveBeenCalledWith(mockEvents)
+    })
+  })
+  describe('renderKeywords', () => {
+    it('should render a list item if keywords come back as faulty data', () => {
+      const mockKeywords = {error: 'errormessage'}
+      const result = wrapper.instance().renderKeywords(mockKeywords)
+      expect(result).toEqual(<li>No results found</li>)
     })
   })
   describe('mapDispatchToProps', () => {

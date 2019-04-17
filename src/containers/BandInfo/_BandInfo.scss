@@ -3,8 +3,16 @@
   padding-bottom: 40px;
 }
 
-.search-area h4, p {
+.search-area h4 {
   cursor: default;
+  font-size: 150%;
+  font-style: italic;
+}
+
+.search-area p {
+  cursor: default; 
+  font-size: 120%;
+
 }
 
 .search-area span {
@@ -12,6 +20,7 @@
   &:hover {
     color: $lavender;
     cursor: pointer;
+    font-style: italic;
   }
 }
 
@@ -31,15 +40,18 @@ ul {
 }
 
 .search-term {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   &:hover {
     color: $lavender;
     cursor: pointer;
+    font-style: italic;
+    transform: scale(1.08)
   }
 }
 
 .list-head {
   cursor: default;
+  font-family: $fancyFont;
   font-size: 150%;
   margin-bottom: 15px;
   text-decoration: underline;

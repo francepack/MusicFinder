@@ -1,24 +1,24 @@
 import React from 'react'
 
 export const createUrlString = (keyword, state, city, startDate, endDate) => {
-  const keywordUrl = makeUrlString(keyword)
+  const keywordUrl = makeStringUrl(keyword)
   let urlString = `&classificationName=music&keyword=${keywordUrl}`
   if (state) {
-    const cleanState = makeUrlString(state)
+    const cleanState = makeStringUrl(state)
     const stateUrl = `&stateCode=${cleanState}`
     urlString = urlString + stateUrl
   }
   if (city) {
-    const cleanCity = makeUrlString(city)
+    const cleanCity = makeStringUrl(city)
     const cityUrl = `&city=${cleanCity}`
     urlString = urlString + cityUrl
   }
-  if (startDate) {
+  if (startDate && startDate.split('/').length === 3) {
     const cleanStartDate = makeDateUrl(startDate)
     const startDateUrl = `&startDateTime=${cleanStartDate}T01:00:00Z`
     urlString = urlString + startDateUrl
   }
-  if (endDate) {
+  if (endDate && endDate.split('/').length === 3) {
     const cleanEndDate = makeDateUrl(endDate)
     const endDateUrl = `&endDateTime=${cleanEndDate}T01:00:00Z`
     urlString = urlString + endDateUrl
@@ -26,7 +26,7 @@ export const createUrlString = (keyword, state, city, startDate, endDate) => {
   return urlString
 }
 
-export const makeUrlString= (band) => {
+export const makeStringUrl = (band) => {
   const letters = band.split('')
   const url = letters.map(letter => {
     switch (letter) {
@@ -65,10 +65,10 @@ export const makeUrlString= (band) => {
 
 export const makeDateUrl = (date) => {
   const splitDate = date.split('/')
-  const year = splitDate[2]
-  const day = splitDate[1]
-  const month = splitDate[0]
-  return `${year}-${month}-${day}`
+    const year = splitDate[2]
+    const day = splitDate[1]
+    const month = splitDate[0]
+    return `${year}-${month}-${day}`
 }
 
 export const matchSimilarBands = (lastfmArr, tastediveArr) => {

@@ -41,7 +41,7 @@ ShallowWrapper {
           collectSearchParams={[Function]}
         />,
         <h4>
-          Click a search term below
+          Click a term below to search
         </h4>,
         <p>
           You searched: 
@@ -142,10 +142,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Click a search term below",
+          "children": "Click a term below to search",
         },
         "ref": null,
-        "rendered": "Click a search term below",
+        "rendered": "Click a term below to search",
         "type": "h4",
       },
       Object {
@@ -556,7 +556,7 @@ ShallowWrapper {
             collectSearchParams={[Function]}
           />,
           <h4>
-            Click a search term below
+            Click a term below to search
           </h4>,
           <p>
             You searched: 
@@ -657,10 +657,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Click a search term below",
+            "children": "Click a term below to search",
           },
           "ref": null,
-          "rendered": "Click a search term below",
+          "rendered": "Click a term below to search",
           "type": "h4",
         },
         Object {

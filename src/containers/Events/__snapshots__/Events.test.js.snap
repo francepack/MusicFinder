@@ -80,13 +80,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
+        <main
           className="events-container"
         >
-          <div
+          <section
             className="event-card"
           >
             <a
+              rel="noopener noreferrer"
               target="_blank"
             >
               <div
@@ -100,18 +101,18 @@ ShallowWrapper {
                 <div
                   className="overlay"
                 >
-                  <div
+                  <article
                     className="card-details"
                   >
-                    <div
+                    <header
                       className="top-details"
                     >
                       <h3>
                         OK Go
                       </h3>
                       <p />
-                    </div>
-                    <div
+                    </header>
+                    <footer
                       className="bottom-details"
                     >
                       <p>
@@ -120,16 +121,17 @@ ShallowWrapper {
                       <p>
                         Venue: 
                       </p>
-                    </div>
-                  </div>
+                    </footer>
+                  </article>
                 </div>
               </div>
             </a>
-          </div>
-          <div
+          </section>
+          <section
             className="event-card"
           >
             <a
+              rel="noopener noreferrer"
               target="_blank"
             >
               <div
@@ -143,18 +145,18 @@ ShallowWrapper {
                 <div
                   className="overlay"
                 >
-                  <div
+                  <article
                     className="card-details"
                   >
-                    <div
+                    <header
                       className="top-details"
                     >
                       <h3>
                         Ween
                       </h3>
                       <p />
-                    </div>
-                    <div
+                    </header>
+                    <footer
                       className="bottom-details"
                     >
                       <p>
@@ -163,20 +165,20 @@ ShallowWrapper {
                       <p>
                         Venue: 
                       </p>
-                    </div>
-                  </div>
+                    </footer>
+                  </article>
                 </div>
               </div>
             </a>
-          </div>
-        </div>,
+          </section>
+        </main>,
         <Link
-          to="./"
+          to="./band-info"
         >
           <button
             className="return-btn"
           >
-            Return
+            Return to Results
           </button>
         </Link>,
       ],
@@ -190,10 +192,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
+            <section
               className="event-card"
             >
               <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -207,18 +210,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -227,16 +230,17 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>
-            </div>,
-            <div
+            </section>,
+            <section
               className="event-card"
             >
               <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -250,18 +254,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -270,12 +274,12 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>
-            </div>,
+            </section>,
           ],
           "className": "events-container",
         },
@@ -287,6 +291,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -300,18 +305,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -320,8 +325,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>,
@@ -344,18 +349,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -364,11 +369,12 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>,
                 "href": undefined,
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -380,18 +386,18 @@ ShallowWrapper {
                   "children": <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -400,8 +406,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>,
                   "className": "background",
                   "style": Object {
@@ -414,18 +420,18 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <div
+                    "children": <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -434,8 +440,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>,
+                      </footer>
+                    </article>,
                     "className": "overlay",
                   },
                   "ref": null,
@@ -445,15 +451,15 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>,
-                        <div
+                        </header>,
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -462,7 +468,7 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>,
+                        </footer>,
                       ],
                       "className": "card-details",
                     },
@@ -506,7 +512,7 @@ ShallowWrapper {
                             "type": "p",
                           },
                         ],
-                        "type": "div",
+                        "type": "header",
                       },
                       Object {
                         "instance": null,
@@ -560,10 +566,10 @@ ShallowWrapper {
                             "type": "p",
                           },
                         ],
-                        "type": "div",
+                        "type": "footer",
                       },
                     ],
-                    "type": "div",
+                    "type": "article",
                   },
                   "type": "div",
                 },
@@ -571,7 +577,7 @@ ShallowWrapper {
               },
               "type": "a",
             },
-            "type": "div",
+            "type": "section",
           },
           Object {
             "instance": null,
@@ -579,6 +585,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -592,18 +599,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -612,8 +619,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>,
@@ -636,18 +643,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -656,11 +663,12 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>,
                 "href": undefined,
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -672,18 +680,18 @@ ShallowWrapper {
                   "children": <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -692,8 +700,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>,
                   "className": "background",
                   "style": Object {
@@ -706,18 +714,18 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <div
+                    "children": <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -726,8 +734,8 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>,
+                      </footer>
+                    </article>,
                     "className": "overlay",
                   },
                   "ref": null,
@@ -737,15 +745,15 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>,
-                        <div
+                        </header>,
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -754,7 +762,7 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>,
+                        </footer>,
                       ],
                       "className": "card-details",
                     },
@@ -798,7 +806,7 @@ ShallowWrapper {
                             "type": "p",
                           },
                         ],
-                        "type": "div",
+                        "type": "header",
                       },
                       Object {
                         "instance": null,
@@ -852,10 +860,10 @@ ShallowWrapper {
                             "type": "p",
                           },
                         ],
-                        "type": "div",
+                        "type": "footer",
                       },
                     ],
-                    "type": "div",
+                    "type": "article",
                   },
                   "type": "div",
                 },
@@ -863,10 +871,10 @@ ShallowWrapper {
               },
               "type": "a",
             },
-            "type": "div",
+            "type": "section",
           },
         ],
-        "type": "div",
+        "type": "main",
       },
       Object {
         "instance": null,
@@ -876,9 +884,9 @@ ShallowWrapper {
           "children": <button
             className="return-btn"
           >
-            Return
+            Return to Results
           </button>,
-          "to": "./",
+          "to": "./band-info",
         },
         "ref": null,
         "rendered": Object {
@@ -886,11 +894,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Return",
+            "children": "Return to Results",
             "className": "return-btn",
           },
           "ref": null,
-          "rendered": "Return",
+          "rendered": "Return to Results",
           "type": "button",
         },
         "type": [Function],
@@ -905,13 +913,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
+          <main
             className="events-container"
           >
-            <div
+            <section
               className="event-card"
             >
               <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -925,18 +934,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           OK Go
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -945,16 +954,17 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>
-            </div>
-            <div
+            </section>
+            <section
               className="event-card"
             >
               <a
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <div
@@ -968,18 +978,18 @@ ShallowWrapper {
                   <div
                     className="overlay"
                   >
-                    <div
+                    <article
                       className="card-details"
                     >
-                      <div
+                      <header
                         className="top-details"
                       >
                         <h3>
                           Ween
                         </h3>
                         <p />
-                      </div>
-                      <div
+                      </header>
+                      <footer
                         className="bottom-details"
                       >
                         <p>
@@ -988,20 +998,20 @@ ShallowWrapper {
                         <p>
                           Venue: 
                         </p>
-                      </div>
-                    </div>
+                      </footer>
+                    </article>
                   </div>
                 </div>
               </a>
-            </div>
-          </div>,
+            </section>
+          </main>,
           <Link
-            to="./"
+            to="./band-info"
           >
             <button
               className="return-btn"
             >
-              Return
+              Return to Results
             </button>
           </Link>,
         ],
@@ -1015,10 +1025,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
+              <section
                 className="event-card"
               >
                 <a
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
@@ -1032,18 +1043,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1052,16 +1063,17 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>
                 </a>
-              </div>,
-              <div
+              </section>,
+              <section
                 className="event-card"
               >
                 <a
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
@@ -1075,18 +1087,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1095,12 +1107,12 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>
                 </a>
-              </div>,
+              </section>,
             ],
             "className": "events-container",
           },
@@ -1112,6 +1124,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <a
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
@@ -1125,18 +1138,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1145,8 +1158,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>
                 </a>,
@@ -1169,18 +1182,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1189,11 +1202,12 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>,
                   "href": undefined,
+                  "rel": "noopener noreferrer",
                   "target": "_blank",
                 },
                 "ref": null,
@@ -1205,18 +1219,18 @@ ShallowWrapper {
                     "children": <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1225,8 +1239,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>,
                     "className": "background",
                     "style": Object {
@@ -1239,18 +1253,18 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": <div
+                      "children": <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             OK Go
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1259,8 +1273,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>,
+                        </footer>
+                      </article>,
                       "className": "overlay",
                     },
                     "ref": null,
@@ -1270,15 +1284,15 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [
-                          <div
+                          <header
                             className="top-details"
                           >
                             <h3>
                               OK Go
                             </h3>
                             <p />
-                          </div>,
-                          <div
+                          </header>,
+                          <footer
                             className="bottom-details"
                           >
                             <p>
@@ -1287,7 +1301,7 @@ ShallowWrapper {
                             <p>
                               Venue: 
                             </p>
-                          </div>,
+                          </footer>,
                         ],
                         "className": "card-details",
                       },
@@ -1331,7 +1345,7 @@ ShallowWrapper {
                               "type": "p",
                             },
                           ],
-                          "type": "div",
+                          "type": "header",
                         },
                         Object {
                           "instance": null,
@@ -1385,10 +1399,10 @@ ShallowWrapper {
                               "type": "p",
                             },
                           ],
-                          "type": "div",
+                          "type": "footer",
                         },
                       ],
-                      "type": "div",
+                      "type": "article",
                     },
                     "type": "div",
                   },
@@ -1396,7 +1410,7 @@ ShallowWrapper {
                 },
                 "type": "a",
               },
-              "type": "div",
+              "type": "section",
             },
             Object {
               "instance": null,
@@ -1404,6 +1418,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <a
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   <div
@@ -1417,18 +1432,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1437,8 +1452,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>
                 </a>,
@@ -1461,18 +1476,18 @@ ShallowWrapper {
                     <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1481,11 +1496,12 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>
                   </div>,
                   "href": undefined,
+                  "rel": "noopener noreferrer",
                   "target": "_blank",
                 },
                 "ref": null,
@@ -1497,18 +1513,18 @@ ShallowWrapper {
                     "children": <div
                       className="overlay"
                     >
-                      <div
+                      <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1517,8 +1533,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>
+                        </footer>
+                      </article>
                     </div>,
                     "className": "background",
                     "style": Object {
@@ -1531,18 +1547,18 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": <div
+                      "children": <article
                         className="card-details"
                       >
-                        <div
+                        <header
                           className="top-details"
                         >
                           <h3>
                             Ween
                           </h3>
                           <p />
-                        </div>
-                        <div
+                        </header>
+                        <footer
                           className="bottom-details"
                         >
                           <p>
@@ -1551,8 +1567,8 @@ ShallowWrapper {
                           <p>
                             Venue: 
                           </p>
-                        </div>
-                      </div>,
+                        </footer>
+                      </article>,
                       "className": "overlay",
                     },
                     "ref": null,
@@ -1562,15 +1578,15 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [
-                          <div
+                          <header
                             className="top-details"
                           >
                             <h3>
                               Ween
                             </h3>
                             <p />
-                          </div>,
-                          <div
+                          </header>,
+                          <footer
                             className="bottom-details"
                           >
                             <p>
@@ -1579,7 +1595,7 @@ ShallowWrapper {
                             <p>
                               Venue: 
                             </p>
-                          </div>,
+                          </footer>,
                         ],
                         "className": "card-details",
                       },
@@ -1623,7 +1639,7 @@ ShallowWrapper {
                               "type": "p",
                             },
                           ],
-                          "type": "div",
+                          "type": "header",
                         },
                         Object {
                           "instance": null,
@@ -1677,10 +1693,10 @@ ShallowWrapper {
                               "type": "p",
                             },
                           ],
-                          "type": "div",
+                          "type": "footer",
                         },
                       ],
-                      "type": "div",
+                      "type": "article",
                     },
                     "type": "div",
                   },
@@ -1688,10 +1704,10 @@ ShallowWrapper {
                 },
                 "type": "a",
               },
-              "type": "div",
+              "type": "section",
             },
           ],
-          "type": "div",
+          "type": "main",
         },
         Object {
           "instance": null,
@@ -1701,9 +1717,9 @@ ShallowWrapper {
             "children": <button
               className="return-btn"
             >
-              Return
+              Return to Results
             </button>,
-            "to": "./",
+            "to": "./band-info",
           },
           "ref": null,
           "rendered": Object {
@@ -1711,11 +1727,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Return",
+              "children": "Return to Results",
               "className": "return-btn",
             },
             "ref": null,
-            "rendered": "Return",
+            "rendered": "Return to Results",
             "type": "button",
           },
           "type": [Function],
