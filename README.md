@@ -2,6 +2,8 @@
 Are you in the mood to get out to a concert? Perhaps its been awhile and you aren't sure what to look for? MusicFinder has you covered- all you need to do is type in the name of your favorite band, and MusicFinder will provide a variety of suggestions to seach for events that may be of interest to you.
 
 ## Screenshots
+<img width="764" alt="Screen Shot 2019-04-16 at 10 15 37 PM" src="https://user-images.githubusercontent.com/44355328/56261624-0021f900-6099-11e9-8ae1-fc9ef6abdad1.png">
+
 
 ## Use this app
 designate where you'd like to place this on your system, then run on your terminal 
