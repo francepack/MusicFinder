@@ -4,6 +4,7 @@ Are you in the mood to get out to a concert? Perhaps its been awhile and you are
 ## Screenshots
 <img width="764" alt="Screen Shot 2019-04-16 at 10 15 37 PM" src="https://user-images.githubusercontent.com/44355328/56261624-0021f900-6099-11e9-8ae1-fc9ef6abdad1.png">
 
+<img width="929" alt="Screen Shot 2019-04-16 at 10 16 20 PM" src="https://user-images.githubusercontent.com/44355328/56261654-1c259a80-6099-11e9-80c1-fe0c7aabf434.png">
 
 ## Use this app
 designate where you'd like to place this on your system, then run on your terminal 
