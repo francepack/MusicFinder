@@ -20,9 +20,14 @@ describe('App', () => {
       expect(wrapper).toMatchSnapshot()
     })
     it('should have default state', () => {
-      
+      const expected = {
+        error: '',
+        loading: false
+      }
+      expect(wrapper.state()).toEqual(expected)
     })
   })
+
   describe('setError', () => {
     it('should set state error', () => {
       const initialState = {
@@ -40,6 +45,7 @@ describe('App', () => {
       expect(wrapper.state()).toEqual(expected)
     })
   })
+
   describe('setLoading', () => {
     it('should change state loading', () => {
       const initialState = {
@@ -56,6 +62,7 @@ describe('App', () => {
       expect(wrapper.state()).toEqual(expected)
     })
   })
+  
   describe('mapStateToProps', () => {
     it('should return an object with similarBands and tags', () => {
       const state = {

@@ -6,7 +6,6 @@ describe('tags reducer', () => {
     const initialState = []
     const action = {}
     const result = tags(initialState, action)
-
     expect(result).toEqual(initialState)
   })
   it('should return tags', () => {

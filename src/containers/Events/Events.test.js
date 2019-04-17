@@ -1,7 +1,6 @@
 import React from 'react'
 import { Events, mapStateToProps} from './Events'
 import { shallow } from 'enzyme'
-import { buildCards } from '../../helpers/infoCleaners'
 
 jest.mock('../../helpers/apiCalls')
 

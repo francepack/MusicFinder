@@ -14,6 +14,7 @@ describe('infoCleaners', () => {
       expect(result2).toEqual(expected2)
     })
   })
+
   describe('matchSimilarBands', () => {
     it('should take in two arrays and build an array of matching items', () => {
       const mockArray1 = ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10']
@@ -37,6 +38,7 @@ describe('infoCleaners', () => {
       expect(result).toEqual(expected)
     })
   })
+
   describe('buildBandArray', () => {
     it('should take in 3 arrays- if the first array has 10 items, it should return that array', () => {
       const arr1 = [1,2,3,4,5,6,7,8,9,10]
@@ -101,6 +103,7 @@ describe('infoCleaners', () => {
       expect(result).toEqual(expected)
     })
   })
+
   describe('cleanEvents', () => {
     it('should return an object with certain pieces of event data', () => {
       const mockEvent = {
@@ -155,6 +158,7 @@ describe('infoCleaners', () => {
       expect(result).toEqual(expected)
     })
   })
+
   describe('buildCards', () => {
     it('should return the appropriate card if only 1 event is passed in', () => {
       const mockEvents = [{
@@ -269,11 +273,7 @@ describe('infoCleaners', () => {
     expect(result).toEqual(expected)
     })
   })
-  describe('makeDateUrl', () => {
-    it('should', () => {
-      
-    })
-  })
+
   describe('createUrlString', () => {
     it('should format user input to be readable by the api', () => {
       const mockKeyword = 'Beatles'
@@ -285,16 +285,6 @@ describe('infoCleaners', () => {
       const expected = '&classificationName=music&keyword=Beatles&stateCode=CO&city=Denver&startDateTime=2020-11-29T01:00:00Z&endDateTime=2021-11-29T01:00:00Z'
       expect(result).toEqual(expected)
     })
-    it.skip('should call makeDateUrl if a date is present', () => {
-      const mockKeyword = 'Beatles'
-      const mockState = 'CO'
-      const mockCity = 'Denver'
-      const mockStart = '11/29/2020'
-      const mockEnd = '11/29/2021'
-      helpers.makeDateUrl = jest.fn()
-      helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
-      expect(helpers.makeDateUrl).toBeCalled()
-    })
     it('should not call makeDateUrl if a date is absent', () => {
       const mockKeyword = 'Beatles'
       const mockState = 'CO'
@@ -304,16 +294,6 @@ describe('infoCleaners', () => {
       helpers.makeDateUrl = jest.fn()
       helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
       expect(helpers.makeDateUrl).not.toHaveBeenCalled()
-    })
-    it.skip('should always call makeStringUrl with keyword', () => {
-      const mockKeyword = 'beatles'
-      const mockState = ''
-      const mockCity = ''
-      const mockStart = ''
-      const mockEnd = ''
-      helpers.makeStringUrl = jest.fn()
-      helpers.createUrlString(mockKeyword, mockState, mockCity, mockStart, mockEnd)
-      expect(helpers.makeStringUrl).toBeCalled()
     })
   })
 })

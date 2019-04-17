@@ -38,6 +38,7 @@ describe('BandInfo', () => {
       expect(wrapper.state()).toEqual(expected)
     })
   })
+
   describe('collectSearchParams', () => {
     it('should update state state', () => {
       const initialState = {
@@ -112,6 +113,7 @@ describe('BandInfo', () => {
       expect(wrapper.state()).toEqual(expected) 
     })
   })
+
   describe('handleClick', () => {
     it('should call searchKeyword with correct input', () => {
       const mockSearch = 'Hey'
@@ -120,6 +122,7 @@ describe('BandInfo', () => {
       expect(wrapper.instance().searchKeyword).toHaveBeenCalledWith(mockSearch)
     })
   })
+
   describe('searchKeyword', () => {
     beforeEach(() => {
       const mockState = {
@@ -167,13 +170,8 @@ describe('BandInfo', () => {
       await wrapper.instance().searchKeyword(mockKeyword)
       expect(wrapper.instance().showEvents).toBeCalled()
     })
-    it('should unset Load at end of function', async () => {
-      
-    })
-    it('should return an error if fetch fails', () => {
-      
-    })
   })
+  
   describe('createUrl', () => {
     it('should get info from state and give it to helper createUrlString', () => {
       const mockKey = 'searchterm'
@@ -188,6 +186,7 @@ describe('BandInfo', () => {
       expect(createUrlString).toHaveBeenCalledWith(mockKey, mockState.state, mockState.city, mockState.startDate, mockState.endDate)
     })
   })
+
   describe('findEvents', () => {
     it('should call apiCall getEvents', () => {
       const mockUrl = '&keywords=dispatch'
@@ -198,6 +197,7 @@ describe('BandInfo', () => {
       
     })
   })
+
   describe('saveEvents', () => {
     it('should call prop storeEvents', () => {
       const mockEvents = [{name: 'event1'}, {name: 'event2'}]
@@ -205,6 +205,7 @@ describe('BandInfo', () => {
       expect(wrapper.instance().props.storeEvents).toHaveBeenCalledWith(mockEvents)
     })
   })
+
   describe('renderKeywords', () => {
     it('should render a list item if keywords come back as faulty data', () => {
       const mockKeywords = {error: 'errormessage'}
@@ -212,6 +213,7 @@ describe('BandInfo', () => {
       expect(result).toEqual(<li>No results found</li>)
     })
   })
+
   describe('mapDispatchToProps', () => {
     it('should store events', () => {
       const mockEvents = [{name: 'Big Gig'}, {name: 'cochella'}]
@@ -222,6 +224,7 @@ describe('BandInfo', () => {
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     })
   })
+  
   describe('mapStateToProps', () => {
     it('should return an object with a band, similar bands, and tags', () => {
       const mockState = {

@@ -3,24 +3,6 @@ import { cleanEvent, makeStringUrl, buildBandArray } from './infoCleaners'
 
 describe('apiCalls', () => {
   describe('getSimilarBands', () => {
-    it.skip('should call helper function to make user input into a urlstring', async () => {
-      const mockInput = 'Blink-182'
-      let makeStringUrl = jest.fn()
-      getSimilarBands(mockInput)
-      expect(makeStringUrl).toBeCalled()
-    })
-    it('should call functions to get 2 sets of similarBands', async () => {
-      
-    })
-    it.skip('should call a function to find matches if either fetch came up with results', async () => {
-      const mockInput = 'Blink-182'
-      // let makeStringUrl = jest.fn()
-      // let tastediveBands = jest.fn(() => ['results'])
-      // let lastfmBands = jest.fn(() => '')
-      let matchSimilarBands = jest.fn()
-      await getSimilarBands(mockInput)
-      expect(matchSimilarBands).toBeCalled()
-    })
     it('should call a function to build an array of 10 bands', async () => {
       const mockInput = 'Blink-182'
       await getSimilarBands(mockInput)
@@ -32,18 +14,8 @@ describe('apiCalls', () => {
       const result = await getSimilarBands(mockInput)
       expect(result).toHaveLength(10)
     })
-    it.skip('should return an empty array if both fetches fail', async () => {
-      const mockInput = 'Blink-182'
-      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        ok: false,
-        status: 422,
-        json: () => Promise.resolve(undefined)
-      }
-      ))
-      const result = await getSimilarBands(mockInput)
-      expect(result).toEqual([])
-    })
   })
+
   describe('lastfmGetSimilarBands', () => {
     it('should get band names of similar artist from lastfm api', async () => {
       const mockBands = {similarartists: {artist: [{name: 'OK Go'}, {name: 'Example Band'}, {name: 'They might be Giants'}]}}
@@ -70,6 +42,7 @@ describe('apiCalls', () => {
       expect(result).toEqual("Cannot read property 'artist' of undefined")
     })
   })
+
   describe('tastediveGetSimilarBands', () => {
     it('should get names of similar artists from tastedive', async () => {
       const mockBands = {Similar: {Results: [{Name: 'OK Go'}, {Name: 'Example Band'}, {Name: 'They might be Giants'}]}}
@@ -96,6 +69,7 @@ describe('apiCalls', () => {
       expect(result).toEqual("Cannot read property 'Results' of undefined")
     })
   })
+
   describe('getBandTags', () => {
     it('should get names of tags associated with band', async () => {
       const mockTags = {toptags: {tag: [{name: 'cool'}, {name: 'alt-rock'}, {name: 'tag3'}, {name: 'tag4'}, {name: 'tag5'}, {name: 'tag6'}, {name: 'tag7'}, {name: 'tag8'}, {name: 'tag9'}, {name: 'tag10'}, {name: 'tag11'}, {name: 'tag12'}, {name: 'tag13'}, {name: 'tag14'}]}}
@@ -122,6 +96,7 @@ describe('apiCalls', () => {
       expect(result).toEqual([])
     })
   })
+  
   describe('getEvents', () => {
     it('should get event info and return events if found', async () => {
       const mockEvents = {_embedded: {events: [{name: 'OK Go', id: 477, url: 'eventpage.com', images: [{url: 'https://s1.ticketm.nethttp://image.jpg' }], dates: {start: {localDate: '2019-4-4'}}, _embedded:{venues: [{name: 'venue', city: {name: 'Denver'}, address: {line1: '111 A st'}}] }}]}}

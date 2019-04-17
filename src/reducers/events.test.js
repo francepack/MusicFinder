@@ -6,7 +6,6 @@ describe('event reducer', () => {
     const initialState = []
     const action = {}
     const result = events(initialState, action)
-
     expect(result).toEqual(initialState)
   })
   it('should return events', () => {

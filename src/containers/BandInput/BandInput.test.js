@@ -6,7 +6,6 @@ import { getSimilarBands, getBandTags } from '../../helpers/apiCalls';
 
 jest.mock('../../helpers/apiCalls')
 
-
 describe('BandInput', () => {
   let wrapper
   let props
@@ -28,11 +27,13 @@ describe('BandInput', () => {
       expect(wrapper.state()).toEqual(expected)
     })
   })
+
   describe('Snapshots', () => {
     it('should match snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
+
   describe('saveBand', () => {
     it('should call prop storeBand', () => {
       const mockBand = 'ween'
@@ -40,26 +41,23 @@ describe('BandInput', () => {
       expect(wrapper.instance().props.storeBand).toHaveBeenCalledWith(mockBand)
     })
   })
+  
   describe('searchSimilarBands', () => {
     it('should call getSimilarBands with a bandname', () => {
       const mockBand = 'Ween'
       wrapper.instance().searchSimilarBands(mockBand)
       expect(getSimilarBands).toHaveBeenCalledWith(mockBand)
     })
-    it('should return an error message if failed', () => {
-      
-    })
   })
+  
   describe('searchForBandTags', () => {
     it('should call getBandTags with a bandname', () => {
       const mockBand = 'Ween'
       wrapper.instance().searchForBandTags(mockBand)
       expect(getBandTags).toHaveBeenCalledWith(mockBand)
     })
-    it('should return an error message if failed', () => {
-      
-    })
   })
+
   describe('getSearchIdeas', () => {
     it('should call searchSimilarBands', () => {
       const mockBand = 'Ween'
@@ -95,10 +93,8 @@ describe('BandInput', () => {
       await wrapper.instance().getSearchIdeas(mockBand)
       expect(wrapper.instance().props.setLoading).toBeCalled()
     })
-    it('should return an error message if failed', () => {
-      
-    })
   })
+
   describe('handleSubmit', () => {
     it('should prevent default', () => {
       let mockEvent = { preventDefault: jest.fn() }
