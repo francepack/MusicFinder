@@ -15,14 +15,14 @@ export class SearchParams extends Component {
         <h3>Search for events based on similar bands or terms</h3>
         <div className='param-inputs'>
           <div className='location-inputs'>
-            <label>State Code <br />
+            <label>State Code: <br />
             <input name='state'
                    className='state-code'
                    placeholder='Ex. CO' 
                    maxLength={2} 
                    onKeyUp={this.handleChange}>
             </input></label>
-            <label>City <br />
+            <label>City: <br />
             <input name='city'
                    className='city' 
                    placeholder='Ex. Denver'
@@ -34,13 +34,15 @@ export class SearchParams extends Component {
             <label>Show events after: <br />
             <input name='startDate'
                    className='start-date'
-                   placeholder='Ex. 11/29/2019' 
+                   placeholder='Ex. 11/29/2019'
+                   maxLength={10} 
                    onKeyUp={this.handleChange}>
             </input></label>
             <label>Show events before: <br />
             <input name='endDate'
                    className='end-date' 
-                   placeholder='Ex. 8/6/2020'
+                   placeholder='Ex. 08/06/2020'
+                   maxLength={10}
                    onKeyUp={this.handleChange}>
             </input></label>
           </div>

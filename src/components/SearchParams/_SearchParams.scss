@@ -2,14 +2,19 @@
   color: $darkPlat;
 }
 
+.params h3 {
+  cursor: default;
+}
+
 .params input {
-  
+  @include inputs;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .param-inputs {
   display: flex;
-  // justify-content: space-around;
-  
 }
 
 .location-inputs {
@@ -30,10 +35,4 @@
 label {
   text-align: left;
   line-height: 30px;
-}
-
-input {
-  @include inputs;
-  width: 100%;
-  margin-bottom: 20px;
 }

@@ -6,7 +6,6 @@ import { buildCards } from '../../helpers/infoCleaners'
 
 export class Events extends Component {
 
-
   buildEventCards = (events) => {
     return buildCards(events)
   }
@@ -17,7 +16,7 @@ export class Events extends Component {
     return(
       <div className='events-section'>
         {renderEvents}
-        <Link to='./'><button className='return-btn'>Return</button></Link>
+        <Link to='./band-info'><button className='return-btn'>Return to results</button></Link>
       </div>
     )
   }

@@ -5,6 +5,7 @@ form {
 .band-input {
   @include inputs;
   border-radius: 10px 0 0 10px; 
+  margin-bottom: 20px;
   width: 40%;
 }
 

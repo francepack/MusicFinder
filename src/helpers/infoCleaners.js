@@ -1,5 +1,31 @@
 import React from 'react'
 
+export const createUrlString = (keyword, state, city, startDate, endDate) => {
+  const keywordUrl = makeUrlString(keyword)
+  let urlString = `&classificationName=music&keyword=${keywordUrl}`
+  if (state) {
+    const cleanState = makeUrlString(state)
+    const stateUrl = `&stateCode=${cleanState}`
+    urlString = urlString + stateUrl
+  }
+  if (city) {
+    const cleanCity = makeUrlString(city)
+    const cityUrl = `&city=${cleanCity}`
+    urlString = urlString + cityUrl
+  }
+  if (startDate) {
+    const cleanStartDate = makeDateUrl(startDate)
+    const startDateUrl = `&startDateTime=${cleanStartDate}T01:00:00Z`
+    urlString = urlString + startDateUrl
+  }
+  if (endDate) {
+    const cleanEndDate = makeDateUrl(endDate)
+    const endDateUrl = `&endDateTime=${cleanEndDate}T01:00:00Z`
+    urlString = urlString + endDateUrl
+  }
+  return urlString
+}
+
 export const makeUrlString= (band) => {
   const letters = band.split('')
   const url = letters.map(letter => {
@@ -38,8 +64,11 @@ export const makeUrlString= (band) => {
 }
 
 export const makeDateUrl = (date) => {
-  let dateUrl = `startDateTime=`
-  
+  const splitDate = date.split('/')
+  const year = splitDate[2]
+  const day = splitDate[1]
+  const month = splitDate[0]
+  return `${year}-${month}-${day}`
 }
 
 export const matchSimilarBands = (lastfmArr, tastediveArr) => {
@@ -109,6 +138,7 @@ export const cleanEvents = (event) => {
   let venueName = 'No venue listed'
   let venueCity = 'No city listed'
   let venueAddress = 'No address given'
+  let date = 'No date listed'
   let eventImg
   if (event._embedded.venues) {
     venueName = event._embedded.venues[0].name
@@ -120,12 +150,16 @@ export const cleanEvents = (event) => {
   } else {
     eventImg = 'https://image.freepik.com/free-vector/blue-background-people-concert_23-2147604883.jpg'
   }
+  if (event.dates.start.localDate) {
+    let splitDate = event.dates.start.localDate.split('-')
+    date = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
+  }
 
   return { 
     name: event.name, 
     eventUrl: event.url, 
     id: event.id, 
-    date: event.dates.start.localDate,
+    date: date,
     venue: venueName,
     venueAddress: venueAddress,
     city: venueCity,
@@ -137,22 +171,22 @@ export const cleanEvents = (event) => {
 export const buildCards = (events) => {
   if (events.length === 1) {
     const event = events[0]
-    const background = { backgroundImage: `url(${event.image})`}
+    const background = { backgroundImage: `url(${event.image})` }
     return(
       <main className='single'>
         <section className='single-event-card' key={event.id}>
-          <a href={event.eventUrl} target='_blank'>
+          <a href={event.eventUrl} target='_blank' rel='noopener noreferrer'>
             <div className='background' style={background}>
               <div className='overlay'>
                 <article className='card-details'>
-                  <div className='top-details'>
+                  <header className='top-details'>
                     <h3>{event.name}</h3>
                     <p>{event.date}</p>
-                  </div>
-                  <div className='bottom-details'>
+                  </header>
+                  <footer className='bottom-details'>
                     <p>City: {event.city}</p>
                     <p>Venue: {event.venue}</p>
-                  </div>
+                  </footer>
                 </article>
               </div>
             </div>
@@ -162,21 +196,21 @@ export const buildCards = (events) => {
     )
   }
   const cards = events.map(event => {
-    const background = { backgroundImage: `url(${event.image})`}
+    const background = { backgroundImage: `url(${event.image})` }
     return(
       <section className='event-card' key={event.id}>
-        <a href={event.eventUrl} target='_blank'>
+        <a href={event.eventUrl} target='_blank' rel='noopener noreferrer'>
           <div className='background' style={background}>
             <div className='overlay'>
               <article className='card-details'>
-                <div className='top-details'>
+                <header className='top-details'>
                   <h3>{event.name}</h3>
                   <p>{event.date}</p>
-                </div>
-                <div className='bottom-details'>
+                </header>
+                <footer className='bottom-details'>
                   <p>City: {event.city}</p>
                   <p>Venue: {event.venue}</p>
-                </div>
+                </footer>
               </article>
             </div>
           </div>
@@ -185,30 +219,4 @@ export const buildCards = (events) => {
     )
   })
   return(<main className='events-container'>{cards}</main>)
-}
-
-export const createUrlString = (keyword, state, city, startDate, endDate) => {
-  const keywordUrl = makeUrlString(keyword)
-  let urlString = `&classificationName=music&keyword=${keywordUrl}`
-  if (state) {
-    const cleanState = makeUrlString(state)
-    const stateUrl = `&stateCode=${cleanState}`
-    urlString = urlString + stateUrl
-  }
-  if (city) {
-    const cleanCity = makeUrlString(city)
-    const cityUrl = `&city=${cleanCity}`
-    urlString = urlString + cityUrl
-  }
-  if (startDate) {
-    const cleanStartDate = makeDateUrl(startDate)
-    const startDateUrl = `&startDateTime=${cleanStartDate}`
-    urlString = urlString + startDateUrl
-  }
-  if (endDate) {
-    const cleanEndDate = makeDateUrl(endDate)
-    const endDateUrl = `&endDateTime=${cleanEndDate}`
-    urlString = urlString + endDateUrl
-  }
-  return urlString
 }
