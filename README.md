@@ -20,11 +20,17 @@ once that completes, to view in your browser,
 npm start
 ```
 
-## Learning Goals/Tech
-This project utilizes react/redux, react-router, and is tested with jest/enzyme. I draw from 3 APIs: [TasteDive](https://tastedive.com/read/api), [LastFm](https://www.last.fm/api), and [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
+## Technology
+- react/redux
+- react-router
+- jest/enzyme
+- fetch API
 
+## APIs
+I draw from 3 APIs: 
+- [TasteDive](https://tastedive.com/read/api) 
+- [LastFm](https://www.last.fm/api) 
+- [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
+
+## Learning Goals
 This was created to fulfill requirements of passing module 3 of Turing School. As an individual project, we were required to draw upon everything we have learned about react, redux, and router, and combine that with fetch requests to an api, and test it all. We were allowed to create our own project, so keeping our ideas refined and executable, as well as paying attention to project management were key pieces of this project.
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
